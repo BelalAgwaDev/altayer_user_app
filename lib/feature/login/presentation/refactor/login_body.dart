@@ -1,6 +1,8 @@
+import 'package:altayer/core/routing/routes.dart';
 import 'package:altayer/core/style/fonts/font_manger.dart';
 import 'package:altayer/core/style/fonts/strings_manger.dart';
 import 'package:altayer/core/style/sharedWidget/custom_button.dart';
+import 'package:altayer/core/utils/extensions.dart';
 import 'package:altayer/feature/login/bloc/login_bloc.dart';
 import 'package:altayer/feature/login/presentation/widget/email_login_text_form_field.dart';
 import 'package:altayer/feature/login/presentation/widget/or_sign_in_with_text.dart';
@@ -101,7 +103,9 @@ class LoginViewBody extends StatelessWidget {
                         )),
                         TextSpan(
                             recognizer: TapGestureRecognizer()
-                              ..onTap = () => {},
+                              ..onTap = () {
+                                context.pushReplacementNamed(Routes.registerRoute);
+                              },
                             text: AppStrings.signUp,
                             style: Theme.of(context)
                                 .textTheme

@@ -29,12 +29,10 @@ ThemeData getApplicationTheme() {
       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
         backgroundColor: ColorManger.primary,
-        
+
         textStyle: getSemiBoldStyle(
           fontSize: 14.sp,
           color: ColorManger.white,
-
-
         ),
 
         // onPrimary: ColorManger.white,
@@ -81,7 +79,7 @@ ThemeData getApplicationTheme() {
             letterSpacing: 0.8.sp),
 
         bodySmall: getSemiBoldStyle(
-            fontSize: 14.sp,
+            fontSize: 12.sp,
             color: ColorManger.black54,
             wordSpacing: 1.sp,
             height: 1.3.sp,
