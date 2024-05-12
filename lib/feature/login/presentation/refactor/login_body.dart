@@ -1,7 +1,7 @@
 import 'package:altayer/core/style/fonts/font_manger.dart';
 import 'package:altayer/core/style/fonts/strings_manger.dart';
 import 'package:altayer/core/style/sharedWidget/custom_button.dart';
-import 'package:altayer/feature/login/logic/bloc/login_bloc.dart';
+import 'package:altayer/feature/login/bloc/login_bloc.dart';
 import 'package:altayer/feature/login/presentation/widget/email_login_text_form_field.dart';
 import 'package:altayer/feature/login/presentation/widget/or_sign_in_with_text.dart';
 import 'package:altayer/feature/login/presentation/widget/password_login_text_form_field.dart';

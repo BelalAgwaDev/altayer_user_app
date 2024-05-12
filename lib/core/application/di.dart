@@ -1,5 +1,5 @@
 import 'package:altayer/core/application/bloc_observer.dart';
-import 'package:altayer/feature/login/logic/bloc/login_bloc.dart';
+import 'package:altayer/feature/login/bloc/login_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';

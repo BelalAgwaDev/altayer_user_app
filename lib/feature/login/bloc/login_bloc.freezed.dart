@@ -22,7 +22,6 @@ mixin _$LoginEvent {
     required TResult Function(String value) userLoginEmailAddress,
     required TResult Function(String value) userLoginPassword,
     required TResult Function() userShowLoginPassword,
-    required TResult Function() buttonLoginValidation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,7 +30,6 @@ mixin _$LoginEvent {
     TResult? Function(String value)? userLoginEmailAddress,
     TResult? Function(String value)? userLoginPassword,
     TResult? Function()? userShowLoginPassword,
-    TResult? Function()? buttonLoginValidation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,7 +38,6 @@ mixin _$LoginEvent {
     TResult Function(String value)? userLoginEmailAddress,
     TResult Function(String value)? userLoginPassword,
     TResult Function()? userShowLoginPassword,
-    TResult Function()? buttonLoginValidation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -52,8 +49,6 @@ mixin _$LoginEvent {
     required TResult Function(UserLoginPassword value) userLoginPassword,
     required TResult Function(UserShowLoginPassword value)
         userShowLoginPassword,
-    required TResult Function(ButtonLoginValidation value)
-        buttonLoginValidation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,7 +57,6 @@ mixin _$LoginEvent {
     TResult? Function(UserLoginEmailAddress value)? userLoginEmailAddress,
     TResult? Function(UserLoginPassword value)? userLoginPassword,
     TResult? Function(UserShowLoginPassword value)? userShowLoginPassword,
-    TResult? Function(ButtonLoginValidation value)? buttonLoginValidation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -71,7 +65,6 @@ mixin _$LoginEvent {
     TResult Function(UserLoginEmailAddress value)? userLoginEmailAddress,
     TResult Function(UserLoginPassword value)? userLoginPassword,
     TResult Function(UserShowLoginPassword value)? userShowLoginPassword,
-    TResult Function(ButtonLoginValidation value)? buttonLoginValidation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -137,7 +130,6 @@ class _$StartedImpl implements _Started {
     required TResult Function(String value) userLoginEmailAddress,
     required TResult Function(String value) userLoginPassword,
     required TResult Function() userShowLoginPassword,
-    required TResult Function() buttonLoginValidation,
   }) {
     return started();
   }
@@ -149,7 +141,6 @@ class _$StartedImpl implements _Started {
     TResult? Function(String value)? userLoginEmailAddress,
     TResult? Function(String value)? userLoginPassword,
     TResult? Function()? userShowLoginPassword,
-    TResult? Function()? buttonLoginValidation,
   }) {
     return started?.call();
   }
@@ -161,7 +152,6 @@ class _$StartedImpl implements _Started {
     TResult Function(String value)? userLoginEmailAddress,
     TResult Function(String value)? userLoginPassword,
     TResult Function()? userShowLoginPassword,
-    TResult Function()? buttonLoginValidation,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -179,8 +169,6 @@ class _$StartedImpl implements _Started {
     required TResult Function(UserLoginPassword value) userLoginPassword,
     required TResult Function(UserShowLoginPassword value)
         userShowLoginPassword,
-    required TResult Function(ButtonLoginValidation value)
-        buttonLoginValidation,
   }) {
     return started(this);
   }
@@ -192,7 +180,6 @@ class _$StartedImpl implements _Started {
     TResult? Function(UserLoginEmailAddress value)? userLoginEmailAddress,
     TResult? Function(UserLoginPassword value)? userLoginPassword,
     TResult? Function(UserShowLoginPassword value)? userShowLoginPassword,
-    TResult? Function(ButtonLoginValidation value)? buttonLoginValidation,
   }) {
     return started?.call(this);
   }
@@ -204,7 +191,6 @@ class _$StartedImpl implements _Started {
     TResult Function(UserLoginEmailAddress value)? userLoginEmailAddress,
     TResult Function(UserLoginPassword value)? userLoginPassword,
     TResult Function(UserShowLoginPassword value)? userShowLoginPassword,
-    TResult Function(ButtonLoginValidation value)? buttonLoginValidation,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -288,7 +274,6 @@ class _$UserLoginEmailAddressImpl implements UserLoginEmailAddress {
     required TResult Function(String value) userLoginEmailAddress,
     required TResult Function(String value) userLoginPassword,
     required TResult Function() userShowLoginPassword,
-    required TResult Function() buttonLoginValidation,
   }) {
     return userLoginEmailAddress(value);
   }
@@ -300,7 +285,6 @@ class _$UserLoginEmailAddressImpl implements UserLoginEmailAddress {
     TResult? Function(String value)? userLoginEmailAddress,
     TResult? Function(String value)? userLoginPassword,
     TResult? Function()? userShowLoginPassword,
-    TResult? Function()? buttonLoginValidation,
   }) {
     return userLoginEmailAddress?.call(value);
   }
@@ -312,7 +296,6 @@ class _$UserLoginEmailAddressImpl implements UserLoginEmailAddress {
     TResult Function(String value)? userLoginEmailAddress,
     TResult Function(String value)? userLoginPassword,
     TResult Function()? userShowLoginPassword,
-    TResult Function()? buttonLoginValidation,
     required TResult orElse(),
   }) {
     if (userLoginEmailAddress != null) {
@@ -330,8 +313,6 @@ class _$UserLoginEmailAddressImpl implements UserLoginEmailAddress {
     required TResult Function(UserLoginPassword value) userLoginPassword,
     required TResult Function(UserShowLoginPassword value)
         userShowLoginPassword,
-    required TResult Function(ButtonLoginValidation value)
-        buttonLoginValidation,
   }) {
     return userLoginEmailAddress(this);
   }
@@ -343,7 +324,6 @@ class _$UserLoginEmailAddressImpl implements UserLoginEmailAddress {
     TResult? Function(UserLoginEmailAddress value)? userLoginEmailAddress,
     TResult? Function(UserLoginPassword value)? userLoginPassword,
     TResult? Function(UserShowLoginPassword value)? userShowLoginPassword,
-    TResult? Function(ButtonLoginValidation value)? buttonLoginValidation,
   }) {
     return userLoginEmailAddress?.call(this);
   }
@@ -355,7 +335,6 @@ class _$UserLoginEmailAddressImpl implements UserLoginEmailAddress {
     TResult Function(UserLoginEmailAddress value)? userLoginEmailAddress,
     TResult Function(UserLoginPassword value)? userLoginPassword,
     TResult Function(UserShowLoginPassword value)? userShowLoginPassword,
-    TResult Function(ButtonLoginValidation value)? buttonLoginValidation,
     required TResult orElse(),
   }) {
     if (userLoginEmailAddress != null) {
@@ -444,7 +423,6 @@ class _$UserLoginPasswordImpl implements UserLoginPassword {
     required TResult Function(String value) userLoginEmailAddress,
     required TResult Function(String value) userLoginPassword,
     required TResult Function() userShowLoginPassword,
-    required TResult Function() buttonLoginValidation,
   }) {
     return userLoginPassword(value);
   }
@@ -456,7 +434,6 @@ class _$UserLoginPasswordImpl implements UserLoginPassword {
     TResult? Function(String value)? userLoginEmailAddress,
     TResult? Function(String value)? userLoginPassword,
     TResult? Function()? userShowLoginPassword,
-    TResult? Function()? buttonLoginValidation,
   }) {
     return userLoginPassword?.call(value);
   }
@@ -468,7 +445,6 @@ class _$UserLoginPasswordImpl implements UserLoginPassword {
     TResult Function(String value)? userLoginEmailAddress,
     TResult Function(String value)? userLoginPassword,
     TResult Function()? userShowLoginPassword,
-    TResult Function()? buttonLoginValidation,
     required TResult orElse(),
   }) {
     if (userLoginPassword != null) {
@@ -486,8 +462,6 @@ class _$UserLoginPasswordImpl implements UserLoginPassword {
     required TResult Function(UserLoginPassword value) userLoginPassword,
     required TResult Function(UserShowLoginPassword value)
         userShowLoginPassword,
-    required TResult Function(ButtonLoginValidation value)
-        buttonLoginValidation,
   }) {
     return userLoginPassword(this);
   }
@@ -499,7 +473,6 @@ class _$UserLoginPasswordImpl implements UserLoginPassword {
     TResult? Function(UserLoginEmailAddress value)? userLoginEmailAddress,
     TResult? Function(UserLoginPassword value)? userLoginPassword,
     TResult? Function(UserShowLoginPassword value)? userShowLoginPassword,
-    TResult? Function(ButtonLoginValidation value)? buttonLoginValidation,
   }) {
     return userLoginPassword?.call(this);
   }
@@ -511,7 +484,6 @@ class _$UserLoginPasswordImpl implements UserLoginPassword {
     TResult Function(UserLoginEmailAddress value)? userLoginEmailAddress,
     TResult Function(UserLoginPassword value)? userLoginPassword,
     TResult Function(UserShowLoginPassword value)? userShowLoginPassword,
-    TResult Function(ButtonLoginValidation value)? buttonLoginValidation,
     required TResult orElse(),
   }) {
     if (userLoginPassword != null) {
@@ -574,7 +546,6 @@ class _$UserShowLoginPasswordImpl implements UserShowLoginPassword {
     required TResult Function(String value) userLoginEmailAddress,
     required TResult Function(String value) userLoginPassword,
     required TResult Function() userShowLoginPassword,
-    required TResult Function() buttonLoginValidation,
   }) {
     return userShowLoginPassword();
   }
@@ -586,7 +557,6 @@ class _$UserShowLoginPasswordImpl implements UserShowLoginPassword {
     TResult? Function(String value)? userLoginEmailAddress,
     TResult? Function(String value)? userLoginPassword,
     TResult? Function()? userShowLoginPassword,
-    TResult? Function()? buttonLoginValidation,
   }) {
     return userShowLoginPassword?.call();
   }
@@ -598,7 +568,6 @@ class _$UserShowLoginPasswordImpl implements UserShowLoginPassword {
     TResult Function(String value)? userLoginEmailAddress,
     TResult Function(String value)? userLoginPassword,
     TResult Function()? userShowLoginPassword,
-    TResult Function()? buttonLoginValidation,
     required TResult orElse(),
   }) {
     if (userShowLoginPassword != null) {
@@ -616,8 +585,6 @@ class _$UserShowLoginPasswordImpl implements UserShowLoginPassword {
     required TResult Function(UserLoginPassword value) userLoginPassword,
     required TResult Function(UserShowLoginPassword value)
         userShowLoginPassword,
-    required TResult Function(ButtonLoginValidation value)
-        buttonLoginValidation,
   }) {
     return userShowLoginPassword(this);
   }
@@ -629,7 +596,6 @@ class _$UserShowLoginPasswordImpl implements UserShowLoginPassword {
     TResult? Function(UserLoginEmailAddress value)? userLoginEmailAddress,
     TResult? Function(UserLoginPassword value)? userLoginPassword,
     TResult? Function(UserShowLoginPassword value)? userShowLoginPassword,
-    TResult? Function(ButtonLoginValidation value)? buttonLoginValidation,
   }) {
     return userShowLoginPassword?.call(this);
   }
@@ -641,7 +607,6 @@ class _$UserShowLoginPasswordImpl implements UserShowLoginPassword {
     TResult Function(UserLoginEmailAddress value)? userLoginEmailAddress,
     TResult Function(UserLoginPassword value)? userLoginPassword,
     TResult Function(UserShowLoginPassword value)? userShowLoginPassword,
-    TResult Function(ButtonLoginValidation value)? buttonLoginValidation,
     required TResult orElse(),
   }) {
     if (userShowLoginPassword != null) {
@@ -653,131 +618,6 @@ class _$UserShowLoginPasswordImpl implements UserShowLoginPassword {
 
 abstract class UserShowLoginPassword implements LoginEvent {
   const factory UserShowLoginPassword() = _$UserShowLoginPasswordImpl;
-}
-
-/// @nodoc
-abstract class _$$ButtonLoginValidationImplCopyWith<$Res> {
-  factory _$$ButtonLoginValidationImplCopyWith(
-          _$ButtonLoginValidationImpl value,
-          $Res Function(_$ButtonLoginValidationImpl) then) =
-      __$$ButtonLoginValidationImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$ButtonLoginValidationImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$ButtonLoginValidationImpl>
-    implements _$$ButtonLoginValidationImplCopyWith<$Res> {
-  __$$ButtonLoginValidationImplCopyWithImpl(_$ButtonLoginValidationImpl _value,
-      $Res Function(_$ButtonLoginValidationImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$ButtonLoginValidationImpl implements ButtonLoginValidation {
-  const _$ButtonLoginValidationImpl();
-
-  @override
-  String toString() {
-    return 'LoginEvent.buttonLoginValidation()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ButtonLoginValidationImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function(String value) userLoginEmailAddress,
-    required TResult Function(String value) userLoginPassword,
-    required TResult Function() userShowLoginPassword,
-    required TResult Function() buttonLoginValidation,
-  }) {
-    return buttonLoginValidation();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function(String value)? userLoginEmailAddress,
-    TResult? Function(String value)? userLoginPassword,
-    TResult? Function()? userShowLoginPassword,
-    TResult? Function()? buttonLoginValidation,
-  }) {
-    return buttonLoginValidation?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function(String value)? userLoginEmailAddress,
-    TResult Function(String value)? userLoginPassword,
-    TResult Function()? userShowLoginPassword,
-    TResult Function()? buttonLoginValidation,
-    required TResult orElse(),
-  }) {
-    if (buttonLoginValidation != null) {
-      return buttonLoginValidation();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(UserLoginEmailAddress value)
-        userLoginEmailAddress,
-    required TResult Function(UserLoginPassword value) userLoginPassword,
-    required TResult Function(UserShowLoginPassword value)
-        userShowLoginPassword,
-    required TResult Function(ButtonLoginValidation value)
-        buttonLoginValidation,
-  }) {
-    return buttonLoginValidation(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(UserLoginEmailAddress value)? userLoginEmailAddress,
-    TResult? Function(UserLoginPassword value)? userLoginPassword,
-    TResult? Function(UserShowLoginPassword value)? userShowLoginPassword,
-    TResult? Function(ButtonLoginValidation value)? buttonLoginValidation,
-  }) {
-    return buttonLoginValidation?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(UserLoginEmailAddress value)? userLoginEmailAddress,
-    TResult Function(UserLoginPassword value)? userLoginPassword,
-    TResult Function(UserShowLoginPassword value)? userShowLoginPassword,
-    TResult Function(ButtonLoginValidation value)? buttonLoginValidation,
-    required TResult orElse(),
-  }) {
-    if (buttonLoginValidation != null) {
-      return buttonLoginValidation(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ButtonLoginValidation implements LoginEvent {
-  const factory ButtonLoginValidation() = _$ButtonLoginValidationImpl;
 }
 
 /// @nodoc

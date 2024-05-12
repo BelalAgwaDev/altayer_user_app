@@ -1,6 +1,6 @@
 import 'package:altayer/core/application/di.dart';
 import 'package:altayer/core/routing/routes.dart';
-import 'package:altayer/feature/login/logic/bloc/login_bloc.dart';
+import 'package:altayer/feature/login/bloc/login_bloc.dart';
 import 'package:altayer/feature/onBoarding/presentation/screen/on_boarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

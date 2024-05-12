@@ -1,7 +1,6 @@
-import 'dart:async';
 
 import 'package:altayer/core/style/fonts/strings_manger.dart';
-import 'package:altayer/feature/login/logic/bloc/login_bloc.dart';
+import 'package:altayer/feature/login/bloc/login_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
@@ -14,7 +13,6 @@ class PasswordLoginTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Timer? _debounce;
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -31,15 +29,9 @@ class PasswordLoginTextFormField extends StatelessWidget {
           builder: (context, state) {
             return TextFormField(
               onChanged: (value) {
-                // context.read<LoginBloc>().add(UserLoginPassword(value));
-
-                // if (_debounce?.isActive ?? false) _debounce?.cancel();
-                // _debounce = Timer(const Duration(milliseconds: 1000), () {
-                //   // الأحداث المراد إرسالها بعد تأخير
-                //   context.read<LoginBloc>().add(ButtonLoginValidation(value));
-                // });
+        
                 context.read<LoginBloc>().add(UserLoginPassword(value));
-                //  context.read<LoginBloc>().add(const ButtonLoginValidation());
+   
               },
               textInputAction: TextInputAction.next,
               keyboardType: TextInputType.visiblePassword,
