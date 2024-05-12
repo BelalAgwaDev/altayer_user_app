@@ -13,4 +13,16 @@ class AppStrings {
 
   static const String next = "Next";
   static const String getStarted = "Get Started";
+  static const String signIn = "Sign In";
+  static const String hiWelcomeBack = "Hi! Welcome back, you've been missed";
+  static const String forgetPassword =  "Forget Password?";
+  static const String dontHaveAnAccount =  "Don't have an account?";
+  static const String signUp =  "Sign Up";
+  static const String password = "Password";
+  static const String isPasswordValid =  'Please enter a valid password';
+  static const String enterYourPassword =  "Enter your password";
+  static const String email =  "Email";
+  static const String isEmailValid =  'Please enter a valid Email';
+  static const String emailExample =  "Example@gmail.com";
+  static const String orSignInWith =  "Or sign in with";
 }

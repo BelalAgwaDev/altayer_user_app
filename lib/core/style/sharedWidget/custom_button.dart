@@ -1,17 +1,18 @@
+import 'package:altayer/core/style/color/color_manger.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButton extends StatelessWidget {
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final Color color;
   final Text text;
 
-  const CustomButton({
+  CustomButton({
     super.key,
+    color,
     required this.onPressed,
-    required this.color,
     required this.text,
-  });
+  }) : color = onPressed == null ? ColorManger.black54 : ColorManger.primary;
 
   @override
   Widget build(BuildContext context) {

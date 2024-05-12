@@ -1,3 +1,4 @@
+import 'package:altayer/core/style/fonts/font_manger.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -25,19 +26,23 @@ ThemeData getApplicationTheme() {
 //           shape: const StadiumBorder()),
 //
 // //elevated button theme
-//       elevatedButtonTheme: ElevatedButtonThemeData(
-//           style: ElevatedButton.styleFrom(
-//         textStyle: getBoldStyle(
-//           fontSize: FontSize.s13.sp,
-//           color: ColorManger.darkBlue,
-//         ),
-//         // primary: ColorManger.darkBlue,
-//         // onPrimary: ColorManger.white,
-//         // onSurface: ColorManger.white,
-//         shape: RoundedRectangleBorder(
-//             borderRadius: BorderRadius.circular(APPSize.s24.sp)),
-//         fixedSize: Size.fromHeight(AppPadding.p46.sp),
-//       )),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+        backgroundColor: ColorManger.primary,
+        
+        textStyle: getSemiBoldStyle(
+          fontSize: 14.sp,
+          color: ColorManger.white,
+
+
+        ),
+
+        // onPrimary: ColorManger.white,
+        // onSurface: ColorManger.white,
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.r)),
+        fixedSize: Size.fromHeight(40.h),
+      )),
 //
 // //appbar theme
       appBarTheme: AppBarTheme(
@@ -76,7 +81,7 @@ ThemeData getApplicationTheme() {
             letterSpacing: 0.8.sp),
 
         bodySmall: getSemiBoldStyle(
-            fontSize: 11.sp,
+            fontSize: 14.sp,
             color: ColorManger.black54,
             wordSpacing: 1.sp,
             height: 1.3.sp,
@@ -86,6 +91,9 @@ ThemeData getApplicationTheme() {
           fontSize: 14.sp,
           color: ColorManger.black,
         ),
+
+        titleMedium:
+            getSemiBoldStyle(fontSize: 12.sp, color: ColorManger.primary),
       ),
 
 // // using in text on boarding
@@ -110,23 +118,39 @@ ThemeData getApplicationTheme() {
 //
 // input decoration theme ( text form field )
       inputDecorationTheme: InputDecorationTheme(
-        labelStyle: TextStyle(
-          fontWeight: FontWeight.w500,
-          fontSize: 6.sp,
+        contentPadding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+        prefixStyle: getMediumStyle(
+          fontSize: 13.sp,
+          color: ColorManger.black26,
+        ),
+        hintStyle: getMediumStyle(
+          fontSize: 13.sp,
+          color: ColorManger.black26,
+        ),
+        errorStyle: TextStyle(
+            fontSize: 11.sp,
+            fontFamily: FontConsistent.fontFamilyCairo,
+            fontWeight: FontWeight.w500),
+        prefixIconColor: ColorManger.black26,
+        suffixIconColor: ColorManger.black26,
+        labelStyle: getMediumStyle(
+          fontSize: 10.sp,
+          color: ColorManger.black26,
         ),
         filled: true,
-        fillColor: ColorManger.white,
+        fillColor: ColorManger.offWhite,
         focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: ColorManger.primary),
-            borderRadius: BorderRadius.circular(18.sp)),
+            borderSide: BorderSide(color: ColorManger.selected),
+            borderRadius: BorderRadius.circular(12.r)),
         enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(16.sp),
-            borderSide: BorderSide(color: ColorManger.black, width: 0.1.w)),
+            borderRadius: BorderRadius.circular(12.r),
+            borderSide:
+                BorderSide(color: ColorManger.unselected, width: 0.4.w)),
         errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12.sp),
-            borderSide: BorderSide(color: ColorManger.error, width: 0.1.w)),
+            borderRadius: BorderRadius.circular(12.r),
+            borderSide: BorderSide(color: ColorManger.redError, width: 0.4.w)),
         focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12.sp),
-            borderSide: BorderSide(color: ColorManger.error, width: 0.1.w)),
+            borderRadius: BorderRadius.circular(12.r),
+            borderSide: BorderSide(color: ColorManger.redError, width: 0.4.w)),
       ));
 }

@@ -1,6 +1,6 @@
-
-
-
+import 'package:altayer/core/application/bloc_observer.dart';
+import 'package:altayer/feature/login/logic/bloc/login_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -9,6 +9,7 @@ import '../services/app_storage.dart';
 final instance = GetIt.instance;
 Future<void> initAppModule() async {
   // app module ,its a module where we put all generic dependencies
+  Bloc.observer = AppBlocObserver();
 
   // shared prefs instance
   final sharedPrefs = await SharedPreferences.getInstance();
@@ -18,6 +19,9 @@ Future<void> initAppModule() async {
   instance
       .registerLazySingleton<AppPreferences>(() => AppPreferences(instance()));
 
+  // login
+
+  instance.registerFactory<LoginBloc>(() => LoginBloc());
 //   //network info instance
 //   instance.registerLazySingleton<NetworkInfo>(
 //           () => NetworkInfoImpl(InternetConnectionChecker()));
@@ -65,7 +69,6 @@ Future<void> initAppModule() async {
 //   }
 // }
 
-
 // initLogOutModule() {
 //   if (!GetIt.I.isRegistered<LogOutUseCase>()) {
 //     instance.registerFactory<LogOutUseCase>(() => LogOutUseCase(instance()));
@@ -79,10 +82,7 @@ Future<void> initAppModule() async {
 //     instance.registerFactory<AiViewModel>(() => AiViewModel(instance(),instance()));
 //   }
 // }
-
-
 }
-
 
 restAllModule() {
   instance.reset(dispose: false);

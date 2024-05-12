@@ -9,6 +9,7 @@ class ColorManger {
   static Color white =   Colors.white;
   static Color black =   Colors.black;
   static Color black54 =   Colors.black54;
+  static Color black26 =   Colors.black26;
   static Color selected =  const Color(0xffb5734c);
   static Color amberAlpha =  Colors.amber[300]!.withAlpha(220);
   static Color notificationColor =  const Color(0xffd4ae98);

@@ -45,6 +45,19 @@ dependencies:
   flutter_launcher_icons: ^0.13.1
   flutter_screenutil: ^5.9.0
   intl: ^0.19.0
+  flutter_iconly: ^1.0.2
+  bloc: ^8.1.4
+  flutter_bloc: ^8.1.5
+  internet_connection_checker: ^1.0.0+1
+  dio: ^5.4.3+1
+  pretty_dio_logger: ^1.3.1
+  retrofit_generator: ^8.1.0
+  retrofit: ^4.1.0
+  dartz: ^0.10.1
+  freezed: ^2.5.2
+  json_annotation: ^4.9.0
+  freezed_annotation: ^2.4.1
+  rxdart: ^0.27.7
 
 dev_dependencies:
   flutter_test:
@@ -56,6 +69,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
+  build_runner: ^2.4.9
+  json_serializable: ^6.8.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -85,7 +100,10 @@ flutter:
     - asset/image/onBoarding1.png
     - asset/image/onBoarding2.png
     - asset/image/onBoarding3.png
-    - asset/image/login.png
+    - asset/image/apple.png
+    - asset/image/facebook.png
+    - asset/image/google.png
+    - asset/image/vegetable.png
 
 
 

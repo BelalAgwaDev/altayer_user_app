@@ -1,18 +1,16 @@
-
-
-
+import 'package:altayer/core/application/di.dart';
 import 'package:altayer/core/routing/routes.dart';
+import 'package:altayer/feature/login/logic/bloc/login_bloc.dart';
 import 'package:altayer/feature/onBoarding/presentation/screen/on_boarding_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../feature/login/presentation/screen/login_view.dart';
 import '../../feature/splash/presentation/screen/splash_view.dart';
 import '../style/fonts/strings_manger.dart';
 
-
-
 class RouteGenerator {
- static Route<dynamic> getRoute(RouteSettings settings) {
+  static Route<dynamic> getRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.splashRoute:
         return MaterialPageRoute(
@@ -24,12 +22,15 @@ class RouteGenerator {
         );
       case Routes.loginRoute:
         return MaterialPageRoute(
-          builder: (_) => const LoginView(),
+          builder: (_) => BlocProvider(
+            create: (context) => instance<LoginBloc>(),
+            child: const LoginView(),
+          ),
         );
-  
+
       default:
         return unDefinedRoute();
-   }
+    }
   }
 
   static Route<dynamic> unDefinedRoute() {

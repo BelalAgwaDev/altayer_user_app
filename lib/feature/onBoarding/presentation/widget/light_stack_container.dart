@@ -86,7 +86,6 @@ class LightContainer extends StatelessWidget {
                       EdgeInsets.symmetric(horizontal: 20.w, vertical: 25.h),
                   child: CustomButton(
                     onPressed: () => controllerDta.goNext(),
-                    color: ColorManger.primary,
                     text: Text(
                       controllerDta.isLast
                           ? AppStrings.getStarted
