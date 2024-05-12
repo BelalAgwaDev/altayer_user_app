@@ -54,11 +54,16 @@ class LoginViewBody extends StatelessWidget {
               ),
               Align(
                 alignment: Alignment.topRight,
-                child: Text(
-                  AppStrings.forgetPassword,
-                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                        decoration: TextDecoration.underline,
-                      ),
+                child: InkWell(
+                  onTap: () {
+                    context.pushReplacementNamed(Routes.forgetPasswordRoute);
+                  },
+                  child: Text(
+                    AppStrings.forgetPassword,
+                    style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                          decoration: TextDecoration.underline,
+                        ),
+                  ),
                 ),
               ),
               SizedBox(
@@ -104,7 +109,8 @@ class LoginViewBody extends StatelessWidget {
                         TextSpan(
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
-                                context.pushReplacementNamed(Routes.registerRoute);
+                                context
+                                    .pushReplacementNamed(Routes.registerRoute);
                               },
                             text: AppStrings.signUp,
                             style: Theme.of(context)

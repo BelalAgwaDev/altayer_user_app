@@ -15,6 +15,8 @@ class AppStrings {
   static const String next = "Next";
   static const String getStarted = "Get Started";
   static const String signIn = "Sign In";
+  static const String verify = "Verify";
+  static const String continueText = "Continue";
   static const String hiWelcomeBack = "Hi! Welcome back, you've been missed";
   static const String forgetPassword = "Forget Password?";
   static const String dontHaveAnAccount = "Don't have an account?";
@@ -23,6 +25,9 @@ class AppStrings {
   static const String isPasswordValid = 'Please enter a valid password';
   static const String enterYourPassword = "Enter your password";
   static const String email = "Email";
+  static const String verifyCode = "Verify Code";
+  static const String pleaseEnterTheCode =
+      "Please Enter the code we just send to email";
   static const String isEmailValid = 'Please enter a valid Email';
   static const String emailExample = "Example@gmail.com";
   static const String orSignInWith = "Or sign in with";
@@ -33,10 +38,21 @@ class AppStrings {
 
   static const String firstName = "First Name";
   static const String lastName = "Last Name";
+  static const String backToLogin = "Back to Log in";
+  static const String didntRecieveotp = "Didn't receive OTP?";
+  static const String resendCode = "Resend Code";
 
   static const String firstNameExample = "John";
   static const String lastNameExample = "Doe";
   static const String phone = "Phone";
+  static const String newPassword = "New Password";
+  static const String confirmPassword = "confirm password";
+  static const String createNewPassword = "Create New Password";
+  static const String youNewPasswordMustBeDifferent =
+      "you new password must be different \n from previously used password.";
+  static const String restYourPassword = "Reset Your Password";
+  static const String enterYourEmailToSendVerifyCode =
+      "Enter Your email address and we will send you \n instructions to reset your password ";
   static const String enterPhoneNumber = "Enter Phone Number";
   static const String alreadyHaveAccount = "Already have an account?";
   static const String agreeWith = "Agree with";
