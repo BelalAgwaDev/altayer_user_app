@@ -34,10 +34,20 @@ class AppStrings {
   static const String firstName = "First Name";
   static const String lastName = "Last Name";
 
-  static const String nameExample = "John Doe";
+  static const String firstNameExample = "John";
+  static const String lastNameExample = "Doe";
   static const String phone = "Phone";
   static const String enterPhoneNumber = "Enter Phone Number";
   static const String alreadyHaveAccount = "Already have an account?";
   static const String agreeWith = "Agree with";
   static const String termsCondition = "Terms & condition";
+  static const String pleaseEnterValidEmail = "Please Enter Valid Email";
+  static const String pleaseEnterValidPassword = "Please Enter Valid Password";
+  static const String pleaseEnterValidFirstName =
+      "Please Enter Valid First name";
+  static const String pleaseEnterValidLastName = "Please Enter Valid Last name";
+  static const String pleaseEnterValidPhoneNumber =
+      "Please Enter Valid Phone Number";
+  static const String pleaseEnterValidSignUpPhoneNumber =
+      " 8 characters, at least one lowercase,uppercase \n letter,number and special character";
 }

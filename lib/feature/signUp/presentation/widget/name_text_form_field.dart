@@ -1,5 +1,7 @@
 import 'package:altayer/core/style/fonts/strings_manger.dart';
+import 'package:altayer/feature/signUp/bloc/sign_up_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -10,84 +12,90 @@ class NameTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                AppStrings.firstName,
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
-              SizedBox(
-                height: 8.h,
-              ),
-              TextFormField(
-                onChanged: (value) {},
-        
-                textInputAction: TextInputAction.next,
-                keyboardType: TextInputType.text,
-                // controller: context.read<LoginBloc>().userLoginEmailAddress,
-        
-                decoration: InputDecoration(
-                  prefixIcon: Icon(
-                    IconlyBroken.addUser,
-                    size: 18.sp,
+    return BlocBuilder<SignUpBloc, SignUpState>(
+      builder: (context, state) {
+        return Row(
+          children: [
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    AppStrings.firstName,
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
-                  hintText: AppStrings.nameExample,
-                  // errorText: state.whenOrNull(
-                  //   userLoginEmailAddress: (value) {
-                  //     return value.isNotEmpty?value:null;
-                  //   },
-        
-                  // )
-                ),
-              )
-            ],
-          ),
-        ),
-        SizedBox(
-          width: 15.w,
-        ),
-        Expanded(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                AppStrings.lastName,
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
-              SizedBox(
-                height: 8.h,
-              ),
-              TextFormField(
-                onChanged: (value) {},
-        
-                textInputAction: TextInputAction.next,
-                keyboardType: TextInputType.text,
-                // controller: context.read<LoginBloc>().userLoginEmailAddress,
-        
-                decoration: InputDecoration(
-                  prefixIcon: Icon(
-                    IconlyBroken.addUser,
-                    size: 18.sp,
+                  SizedBox(
+                    height: 8.h,
                   ),
-                  hintText: AppStrings.nameExample,
-                  // errorText: state.whenOrNull(
-                  //   userLoginEmailAddress: (value) {
-                  //     return value.isNotEmpty?value:null;
-                  //   },
-        
-                  // )
-                ),
-              )
-            ],
-          ),
-        ),
-      ],
+                  TextFormField(
+                    onChanged: (value) {
+                      context
+                          .read<SignUpBloc>()
+                          .add(UserSignUFirstNameEvent(value));
+                    },
+                    textInputAction: TextInputAction.next,
+                    keyboardType: TextInputType.text,
+                    controller: context.read<SignUpBloc>().userSignUpFirstName,
+                    decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          IconlyBroken.addUser,
+                          size: 18.sp,
+                        ),
+                        hintText: AppStrings.firstNameExample,
+                        errorText: state.whenOrNull(
+                          userSignUpFirstName: (value) {
+                            return value.isNotEmpty ? value : null;
+                          },
+                        )),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              width: 15.w,
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    AppStrings.lastName,
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                  SizedBox(
+                    height: 8.h,
+                  ),
+                  TextFormField(
+                      onChanged: (value) {
+                        context
+                            .read<SignUpBloc>()
+                            .add(UserSignUpLastNameEvent(value));
+                      },
+                      textInputAction: TextInputAction.next,
+                      keyboardType: TextInputType.text,
+                      controller: context.read<SignUpBloc>().userSignUpLastName,
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          IconlyBroken.addUser,
+                          size: 18.sp,
+                        ),
+                        hintText: AppStrings.lastNameExample,
+                        errorText: state.whenOrNull(
+                          userSignUpLastName: (value) {
+                            return value.isNotEmpty ? value : null;
+                          },
+
+                          // )
+                        ),
+                      ))
+                ],
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 }

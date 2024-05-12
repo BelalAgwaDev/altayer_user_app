@@ -2,6 +2,7 @@ import 'package:altayer/core/application/di.dart';
 import 'package:altayer/core/routing/routes.dart';
 import 'package:altayer/feature/login/bloc/login_bloc.dart';
 import 'package:altayer/feature/onBoarding/presentation/screen/on_boarding_view.dart';
+import 'package:altayer/feature/signUp/bloc/sign_up_bloc.dart';
 import 'package:altayer/feature/signUp/presentation/screen/sign_up_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -31,7 +32,10 @@ class RouteGenerator {
 
       case Routes.registerRoute:
         return MaterialPageRoute(
-          builder: (_) => const SignUpView(),
+          builder: (_) => BlocProvider(
+            create: (context) =>  instance<SignUpBloc>(),
+            child: const SignUpView(),
+          ),
         );
 
       default:

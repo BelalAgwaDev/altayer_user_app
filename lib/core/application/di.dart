@@ -1,5 +1,6 @@
 import 'package:altayer/core/application/bloc_observer.dart';
 import 'package:altayer/feature/login/bloc/login_bloc.dart';
+import 'package:altayer/feature/signUp/bloc/sign_up_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -22,6 +23,7 @@ Future<void> initAppModule() async {
   // login
 
   instance.registerFactory<LoginBloc>(() => LoginBloc());
+  instance.registerFactory<SignUpBloc>(() => SignUpBloc());
 //   //network info instance
 //   instance.registerLazySingleton<NetworkInfo>(
 //           () => NetworkInfoImpl(InternetConnectionChecker()));

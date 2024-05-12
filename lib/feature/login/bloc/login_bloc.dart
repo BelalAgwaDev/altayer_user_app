@@ -1,3 +1,4 @@
+import 'package:altayer/core/style/fonts/strings_manger.dart';
 import 'package:altayer/core/utils/app_regex.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,7 +19,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       if (event is UserLoginEmailAddress) {
         if (!AppRegex.isEmailValid(event.value)) {
           emit(const LoginState.userLoginEmailAddress(
-              "Please Enter Valid Email"));
+              AppStrings.pleaseEnterValidEmail));
         } else {
           emit(const LoginState.userLoginEmailAddress(""));
         }
@@ -38,7 +39,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         //  else
         if (!AppRegex.isPasswordValid(event.value)) {
           emit(const LoginState.userLoginPassword(
-              "Please Enter Valid Password"));
+             AppStrings.pleaseEnterValidPassword));
         }
       }
 
