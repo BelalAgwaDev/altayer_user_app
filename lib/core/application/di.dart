@@ -53,7 +53,7 @@ Future<void> initAppModule() async {
   instance
     ..registerLazySingleton<RegisterRepository>(
         () => RegisterRepository(instance(), instance()))
-    ..registerFactory<SignUpBloc>(() => SignUpBloc(instance()));
+    ..registerFactory<SignUpBloc>(() => SignUpBloc(instance(),instance()));
 
   // forget password
   // verify code repositry

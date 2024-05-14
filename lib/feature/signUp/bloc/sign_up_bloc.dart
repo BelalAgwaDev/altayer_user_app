@@ -1,3 +1,4 @@
+import 'package:altayer/core/services/app_storage.dart';
 import 'package:altayer/core/style/fonts/strings_manger.dart';
 import 'package:altayer/core/utils/app_regex.dart';
 import 'package:altayer/feature/signUp/data/model/bodyRequest/sign_up_body_request.dart';
@@ -18,6 +19,7 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
   final TextEditingController userSignUpLastName = TextEditingController();
   final TextEditingController userSignUpPhone = TextEditingController();
   final RegisterRepository _registerRepository;
+  final AppPreferences _appPreferences;
 
   bool showPass = true;
   bool agreeWithTerms = true;
@@ -25,7 +27,8 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
   bool isButtonInVaildator = false;
 
   final signUpFormKey = GlobalKey<FormState>();
-  SignUpBloc(this._registerRepository) : super(const _Initial()) {
+  SignUpBloc(this._registerRepository, this._appPreferences)
+      : super(const _Initial()) {
     on<UserRegisterButtonEvent>(registerButton);
 
     on<SignUpEvent>((event, emit) {
@@ -106,7 +109,6 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
 
   Future<void> registerButtonValidator(
       SignUpEvent event, Emitter<SignUpState> emit) async {
-
     if (!AppRegex.isNameValid(userSignUpFirstName.text) ||
         !AppRegex.isNameValid(userSignUpLastName.text) ||
         !AppRegex.isEmailValid(userSignUpEmailAddress.text) ||
@@ -132,7 +134,7 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
           RegisterRequestBody(
             name:
                 '${userSignUpFirstName.text.trim()} ${userSignUpLastName.text.trim()}',
-            phone: "$countryCode${userSignUpPhone.text.trim()}",
+            phone: userSignUpPhone.text.trim(),
             email: userSignUpEmailAddress.text.trim(),
             password: userSignUpPassword.text.trim(),
           ),
@@ -140,6 +142,12 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
 
         response.when(
           success: (registerResponse) {
+            _appPreferences.setLoginScreenView();
+            _appPreferences.setLoginScreenData(
+                userEmail: registerResponse.data!.email!,
+                userToken: registerResponse.token!,
+                userName: registerResponse.data!.name!,
+                userPhone: registerResponse.data!.phone!);
             emit(SignUpState.suceess(registerResponse));
           },
           failure: (error) {
