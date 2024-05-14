@@ -1,4 +1,4 @@
-import 'package:altayer/feature/forgetPassword/refactor/forget_password_body.dart';
+import 'package:altayer/feature/forgetPassword/presntation/refactor/forget_password_body.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {

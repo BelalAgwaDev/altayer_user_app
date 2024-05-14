@@ -12,4 +12,7 @@ class SignUpState with _$SignUpState {
   const factory SignUpState.showUserSignUpPassword(bool value) = ShowUserSignUpPasswordState;
   const factory SignUpState.buttonSignUpVaildation(bool value) = ButtonSignUpVaildationState;
   const factory SignUpState.signUpAgreeWith(bool value) = signUpAgreeWithState;
+  const factory SignUpState.loading() = SignUpButtonLoadingData;
+  const factory SignUpState.error({required int statesCode,required String errorMessage}) = SignUpButtonErrorData;
+  const factory SignUpState.suceess(RegisterResponse data) = SignUpButtonSuccessData;
 }

@@ -36,7 +36,9 @@ class PhoneTextFormField extends StatelessWidget {
               decoration: InputDecoration(
                   prefixIcon: CountryCodePicker(
                     showFlagMain: false,
-                    onChanged: (value) {},
+                    onChanged: (value) {
+                      context.read<SignUpBloc>().countryCode = value.code!;
+                    },
                     textStyle: TextStyle(color: ColorManger.black26),
                     initialSelection: '+20',
                     favorite: const ['+20', '+39', 'FR', '+966'],

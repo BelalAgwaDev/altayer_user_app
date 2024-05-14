@@ -7,4 +7,7 @@ class LoginState with _$LoginState {
   const factory LoginState.userLoginPassword(String value) = UserLoginPasswordState;
   const factory LoginState.showUserPassword(bool value) = ShowUserPasswordState;
   const factory LoginState.buttonLoginVaildation(bool value) = ButtonLoginVaildation;
+  const factory LoginState.loading() = LoginButtonLoadingData;
+  const factory LoginState.error({required int statesCode,required String errorMessage}) = LoginButtonErrorData;
+  const factory LoginState.suceess(LoginResponse data) = LoginButtonSuccessData;
 }

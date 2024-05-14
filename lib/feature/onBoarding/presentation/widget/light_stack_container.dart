@@ -2,7 +2,7 @@ import 'package:altayer/feature/onBoarding/logic/on_boarding_controller.dart';
 import 'package:altayer/core/style/color/color_manger.dart';
 import 'package:altayer/core/style/fonts/font_manger.dart';
 import 'package:altayer/core/style/fonts/strings_manger.dart';
-import 'package:altayer/core/style/sharedWidget/custom_button.dart';
+import 'package:altayer/core/common/sharedWidget/custom_button.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -86,7 +86,7 @@ class LightContainer extends StatelessWidget {
                       EdgeInsets.symmetric(horizontal: 20.w, vertical: 25.h),
                   child: CustomButton(
                     onPressed: () => controllerDta.goNext(),
-                    text: Text(
+                    widget: Text(
                       controllerDta.isLast
                           ? AppStrings.getStarted
                           : AppStrings.next,

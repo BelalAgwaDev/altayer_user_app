@@ -25,8 +25,9 @@ mixin _$SignUpEvent {
     required TResult Function(String value) userSignUpLastName,
     required TResult Function(String value) userSignUpPhone,
     required TResult Function(String value) userSignUpCountryCode,
-    required TResult Function() userSignUpAgreeWith,
+    required TResult Function(bool? value) userSignUpAgreeWith,
     required TResult Function() userShowSignUpPassword,
+    required TResult Function() userRegisterButton,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,8 +39,9 @@ mixin _$SignUpEvent {
     TResult? Function(String value)? userSignUpLastName,
     TResult? Function(String value)? userSignUpPhone,
     TResult? Function(String value)? userSignUpCountryCode,
-    TResult? Function()? userSignUpAgreeWith,
+    TResult? Function(bool? value)? userSignUpAgreeWith,
     TResult? Function()? userShowSignUpPassword,
+    TResult? Function()? userRegisterButton,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,8 +53,9 @@ mixin _$SignUpEvent {
     TResult Function(String value)? userSignUpLastName,
     TResult Function(String value)? userSignUpPhone,
     TResult Function(String value)? userSignUpCountryCode,
-    TResult Function()? userSignUpAgreeWith,
+    TResult Function(bool? value)? userSignUpAgreeWith,
     TResult Function()? userShowSignUpPassword,
+    TResult Function()? userRegisterButton,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -72,6 +75,7 @@ mixin _$SignUpEvent {
         userSignUpAgreeWith,
     required TResult Function(UserShowSignUpPasswordEvent value)
         userShowSignUpPassword,
+    required TResult Function(UserRegisterButtonEvent value) userRegisterButton,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -87,6 +91,7 @@ mixin _$SignUpEvent {
     TResult? Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult? Function(UserShowSignUpPasswordEvent value)?
         userShowSignUpPassword,
+    TResult? Function(UserRegisterButtonEvent value)? userRegisterButton,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -100,6 +105,7 @@ mixin _$SignUpEvent {
     TResult Function(UserSignUpCountryCodeEvent value)? userSignUpCountryCode,
     TResult Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult Function(UserShowSignUpPasswordEvent value)? userShowSignUpPassword,
+    TResult Function(UserRegisterButtonEvent value)? userRegisterButton,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -168,8 +174,9 @@ class _$StartedImpl implements _Started {
     required TResult Function(String value) userSignUpLastName,
     required TResult Function(String value) userSignUpPhone,
     required TResult Function(String value) userSignUpCountryCode,
-    required TResult Function() userSignUpAgreeWith,
+    required TResult Function(bool? value) userSignUpAgreeWith,
     required TResult Function() userShowSignUpPassword,
+    required TResult Function() userRegisterButton,
   }) {
     return started();
   }
@@ -184,8 +191,9 @@ class _$StartedImpl implements _Started {
     TResult? Function(String value)? userSignUpLastName,
     TResult? Function(String value)? userSignUpPhone,
     TResult? Function(String value)? userSignUpCountryCode,
-    TResult? Function()? userSignUpAgreeWith,
+    TResult? Function(bool? value)? userSignUpAgreeWith,
     TResult? Function()? userShowSignUpPassword,
+    TResult? Function()? userRegisterButton,
   }) {
     return started?.call();
   }
@@ -200,8 +208,9 @@ class _$StartedImpl implements _Started {
     TResult Function(String value)? userSignUpLastName,
     TResult Function(String value)? userSignUpPhone,
     TResult Function(String value)? userSignUpCountryCode,
-    TResult Function()? userSignUpAgreeWith,
+    TResult Function(bool? value)? userSignUpAgreeWith,
     TResult Function()? userShowSignUpPassword,
+    TResult Function()? userRegisterButton,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -227,6 +236,7 @@ class _$StartedImpl implements _Started {
         userSignUpAgreeWith,
     required TResult Function(UserShowSignUpPasswordEvent value)
         userShowSignUpPassword,
+    required TResult Function(UserRegisterButtonEvent value) userRegisterButton,
   }) {
     return started(this);
   }
@@ -245,6 +255,7 @@ class _$StartedImpl implements _Started {
     TResult? Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult? Function(UserShowSignUpPasswordEvent value)?
         userShowSignUpPassword,
+    TResult? Function(UserRegisterButtonEvent value)? userRegisterButton,
   }) {
     return started?.call(this);
   }
@@ -261,6 +272,7 @@ class _$StartedImpl implements _Started {
     TResult Function(UserSignUpCountryCodeEvent value)? userSignUpCountryCode,
     TResult Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult Function(UserShowSignUpPasswordEvent value)? userShowSignUpPassword,
+    TResult Function(UserRegisterButtonEvent value)? userRegisterButton,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -348,8 +360,9 @@ class _$UserSignUpEmailAddressEventImpl implements UserSignUpEmailAddressEvent {
     required TResult Function(String value) userSignUpLastName,
     required TResult Function(String value) userSignUpPhone,
     required TResult Function(String value) userSignUpCountryCode,
-    required TResult Function() userSignUpAgreeWith,
+    required TResult Function(bool? value) userSignUpAgreeWith,
     required TResult Function() userShowSignUpPassword,
+    required TResult Function() userRegisterButton,
   }) {
     return userSignUpEmailAddress(value);
   }
@@ -364,8 +377,9 @@ class _$UserSignUpEmailAddressEventImpl implements UserSignUpEmailAddressEvent {
     TResult? Function(String value)? userSignUpLastName,
     TResult? Function(String value)? userSignUpPhone,
     TResult? Function(String value)? userSignUpCountryCode,
-    TResult? Function()? userSignUpAgreeWith,
+    TResult? Function(bool? value)? userSignUpAgreeWith,
     TResult? Function()? userShowSignUpPassword,
+    TResult? Function()? userRegisterButton,
   }) {
     return userSignUpEmailAddress?.call(value);
   }
@@ -380,8 +394,9 @@ class _$UserSignUpEmailAddressEventImpl implements UserSignUpEmailAddressEvent {
     TResult Function(String value)? userSignUpLastName,
     TResult Function(String value)? userSignUpPhone,
     TResult Function(String value)? userSignUpCountryCode,
-    TResult Function()? userSignUpAgreeWith,
+    TResult Function(bool? value)? userSignUpAgreeWith,
     TResult Function()? userShowSignUpPassword,
+    TResult Function()? userRegisterButton,
     required TResult orElse(),
   }) {
     if (userSignUpEmailAddress != null) {
@@ -407,6 +422,7 @@ class _$UserSignUpEmailAddressEventImpl implements UserSignUpEmailAddressEvent {
         userSignUpAgreeWith,
     required TResult Function(UserShowSignUpPasswordEvent value)
         userShowSignUpPassword,
+    required TResult Function(UserRegisterButtonEvent value) userRegisterButton,
   }) {
     return userSignUpEmailAddress(this);
   }
@@ -425,6 +441,7 @@ class _$UserSignUpEmailAddressEventImpl implements UserSignUpEmailAddressEvent {
     TResult? Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult? Function(UserShowSignUpPasswordEvent value)?
         userShowSignUpPassword,
+    TResult? Function(UserRegisterButtonEvent value)? userRegisterButton,
   }) {
     return userSignUpEmailAddress?.call(this);
   }
@@ -441,6 +458,7 @@ class _$UserSignUpEmailAddressEventImpl implements UserSignUpEmailAddressEvent {
     TResult Function(UserSignUpCountryCodeEvent value)? userSignUpCountryCode,
     TResult Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult Function(UserShowSignUpPasswordEvent value)? userShowSignUpPassword,
+    TResult Function(UserRegisterButtonEvent value)? userRegisterButton,
     required TResult orElse(),
   }) {
     if (userSignUpEmailAddress != null) {
@@ -534,8 +552,9 @@ class _$UserSignUpPasswordEventImpl implements UserSignUpPasswordEvent {
     required TResult Function(String value) userSignUpLastName,
     required TResult Function(String value) userSignUpPhone,
     required TResult Function(String value) userSignUpCountryCode,
-    required TResult Function() userSignUpAgreeWith,
+    required TResult Function(bool? value) userSignUpAgreeWith,
     required TResult Function() userShowSignUpPassword,
+    required TResult Function() userRegisterButton,
   }) {
     return userSignUpPassword(value);
   }
@@ -550,8 +569,9 @@ class _$UserSignUpPasswordEventImpl implements UserSignUpPasswordEvent {
     TResult? Function(String value)? userSignUpLastName,
     TResult? Function(String value)? userSignUpPhone,
     TResult? Function(String value)? userSignUpCountryCode,
-    TResult? Function()? userSignUpAgreeWith,
+    TResult? Function(bool? value)? userSignUpAgreeWith,
     TResult? Function()? userShowSignUpPassword,
+    TResult? Function()? userRegisterButton,
   }) {
     return userSignUpPassword?.call(value);
   }
@@ -566,8 +586,9 @@ class _$UserSignUpPasswordEventImpl implements UserSignUpPasswordEvent {
     TResult Function(String value)? userSignUpLastName,
     TResult Function(String value)? userSignUpPhone,
     TResult Function(String value)? userSignUpCountryCode,
-    TResult Function()? userSignUpAgreeWith,
+    TResult Function(bool? value)? userSignUpAgreeWith,
     TResult Function()? userShowSignUpPassword,
+    TResult Function()? userRegisterButton,
     required TResult orElse(),
   }) {
     if (userSignUpPassword != null) {
@@ -593,6 +614,7 @@ class _$UserSignUpPasswordEventImpl implements UserSignUpPasswordEvent {
         userSignUpAgreeWith,
     required TResult Function(UserShowSignUpPasswordEvent value)
         userShowSignUpPassword,
+    required TResult Function(UserRegisterButtonEvent value) userRegisterButton,
   }) {
     return userSignUpPassword(this);
   }
@@ -611,6 +633,7 @@ class _$UserSignUpPasswordEventImpl implements UserSignUpPasswordEvent {
     TResult? Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult? Function(UserShowSignUpPasswordEvent value)?
         userShowSignUpPassword,
+    TResult? Function(UserRegisterButtonEvent value)? userRegisterButton,
   }) {
     return userSignUpPassword?.call(this);
   }
@@ -627,6 +650,7 @@ class _$UserSignUpPasswordEventImpl implements UserSignUpPasswordEvent {
     TResult Function(UserSignUpCountryCodeEvent value)? userSignUpCountryCode,
     TResult Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult Function(UserShowSignUpPasswordEvent value)? userShowSignUpPassword,
+    TResult Function(UserRegisterButtonEvent value)? userRegisterButton,
     required TResult orElse(),
   }) {
     if (userSignUpPassword != null) {
@@ -720,8 +744,9 @@ class _$UserSignUFirstNameEventImpl implements UserSignUFirstNameEvent {
     required TResult Function(String value) userSignUpLastName,
     required TResult Function(String value) userSignUpPhone,
     required TResult Function(String value) userSignUpCountryCode,
-    required TResult Function() userSignUpAgreeWith,
+    required TResult Function(bool? value) userSignUpAgreeWith,
     required TResult Function() userShowSignUpPassword,
+    required TResult Function() userRegisterButton,
   }) {
     return userSignUpFirstName(value);
   }
@@ -736,8 +761,9 @@ class _$UserSignUFirstNameEventImpl implements UserSignUFirstNameEvent {
     TResult? Function(String value)? userSignUpLastName,
     TResult? Function(String value)? userSignUpPhone,
     TResult? Function(String value)? userSignUpCountryCode,
-    TResult? Function()? userSignUpAgreeWith,
+    TResult? Function(bool? value)? userSignUpAgreeWith,
     TResult? Function()? userShowSignUpPassword,
+    TResult? Function()? userRegisterButton,
   }) {
     return userSignUpFirstName?.call(value);
   }
@@ -752,8 +778,9 @@ class _$UserSignUFirstNameEventImpl implements UserSignUFirstNameEvent {
     TResult Function(String value)? userSignUpLastName,
     TResult Function(String value)? userSignUpPhone,
     TResult Function(String value)? userSignUpCountryCode,
-    TResult Function()? userSignUpAgreeWith,
+    TResult Function(bool? value)? userSignUpAgreeWith,
     TResult Function()? userShowSignUpPassword,
+    TResult Function()? userRegisterButton,
     required TResult orElse(),
   }) {
     if (userSignUpFirstName != null) {
@@ -779,6 +806,7 @@ class _$UserSignUFirstNameEventImpl implements UserSignUFirstNameEvent {
         userSignUpAgreeWith,
     required TResult Function(UserShowSignUpPasswordEvent value)
         userShowSignUpPassword,
+    required TResult Function(UserRegisterButtonEvent value) userRegisterButton,
   }) {
     return userSignUpFirstName(this);
   }
@@ -797,6 +825,7 @@ class _$UserSignUFirstNameEventImpl implements UserSignUFirstNameEvent {
     TResult? Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult? Function(UserShowSignUpPasswordEvent value)?
         userShowSignUpPassword,
+    TResult? Function(UserRegisterButtonEvent value)? userRegisterButton,
   }) {
     return userSignUpFirstName?.call(this);
   }
@@ -813,6 +842,7 @@ class _$UserSignUFirstNameEventImpl implements UserSignUFirstNameEvent {
     TResult Function(UserSignUpCountryCodeEvent value)? userSignUpCountryCode,
     TResult Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult Function(UserShowSignUpPasswordEvent value)? userShowSignUpPassword,
+    TResult Function(UserRegisterButtonEvent value)? userRegisterButton,
     required TResult orElse(),
   }) {
     if (userSignUpFirstName != null) {
@@ -906,8 +936,9 @@ class _$UserSignUpLastNameEventImpl implements UserSignUpLastNameEvent {
     required TResult Function(String value) userSignUpLastName,
     required TResult Function(String value) userSignUpPhone,
     required TResult Function(String value) userSignUpCountryCode,
-    required TResult Function() userSignUpAgreeWith,
+    required TResult Function(bool? value) userSignUpAgreeWith,
     required TResult Function() userShowSignUpPassword,
+    required TResult Function() userRegisterButton,
   }) {
     return userSignUpLastName(value);
   }
@@ -922,8 +953,9 @@ class _$UserSignUpLastNameEventImpl implements UserSignUpLastNameEvent {
     TResult? Function(String value)? userSignUpLastName,
     TResult? Function(String value)? userSignUpPhone,
     TResult? Function(String value)? userSignUpCountryCode,
-    TResult? Function()? userSignUpAgreeWith,
+    TResult? Function(bool? value)? userSignUpAgreeWith,
     TResult? Function()? userShowSignUpPassword,
+    TResult? Function()? userRegisterButton,
   }) {
     return userSignUpLastName?.call(value);
   }
@@ -938,8 +970,9 @@ class _$UserSignUpLastNameEventImpl implements UserSignUpLastNameEvent {
     TResult Function(String value)? userSignUpLastName,
     TResult Function(String value)? userSignUpPhone,
     TResult Function(String value)? userSignUpCountryCode,
-    TResult Function()? userSignUpAgreeWith,
+    TResult Function(bool? value)? userSignUpAgreeWith,
     TResult Function()? userShowSignUpPassword,
+    TResult Function()? userRegisterButton,
     required TResult orElse(),
   }) {
     if (userSignUpLastName != null) {
@@ -965,6 +998,7 @@ class _$UserSignUpLastNameEventImpl implements UserSignUpLastNameEvent {
         userSignUpAgreeWith,
     required TResult Function(UserShowSignUpPasswordEvent value)
         userShowSignUpPassword,
+    required TResult Function(UserRegisterButtonEvent value) userRegisterButton,
   }) {
     return userSignUpLastName(this);
   }
@@ -983,6 +1017,7 @@ class _$UserSignUpLastNameEventImpl implements UserSignUpLastNameEvent {
     TResult? Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult? Function(UserShowSignUpPasswordEvent value)?
         userShowSignUpPassword,
+    TResult? Function(UserRegisterButtonEvent value)? userRegisterButton,
   }) {
     return userSignUpLastName?.call(this);
   }
@@ -999,6 +1034,7 @@ class _$UserSignUpLastNameEventImpl implements UserSignUpLastNameEvent {
     TResult Function(UserSignUpCountryCodeEvent value)? userSignUpCountryCode,
     TResult Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult Function(UserShowSignUpPasswordEvent value)? userShowSignUpPassword,
+    TResult Function(UserRegisterButtonEvent value)? userRegisterButton,
     required TResult orElse(),
   }) {
     if (userSignUpLastName != null) {
@@ -1091,8 +1127,9 @@ class _$UserSignUpPhoneEventImpl implements UserSignUpPhoneEvent {
     required TResult Function(String value) userSignUpLastName,
     required TResult Function(String value) userSignUpPhone,
     required TResult Function(String value) userSignUpCountryCode,
-    required TResult Function() userSignUpAgreeWith,
+    required TResult Function(bool? value) userSignUpAgreeWith,
     required TResult Function() userShowSignUpPassword,
+    required TResult Function() userRegisterButton,
   }) {
     return userSignUpPhone(value);
   }
@@ -1107,8 +1144,9 @@ class _$UserSignUpPhoneEventImpl implements UserSignUpPhoneEvent {
     TResult? Function(String value)? userSignUpLastName,
     TResult? Function(String value)? userSignUpPhone,
     TResult? Function(String value)? userSignUpCountryCode,
-    TResult? Function()? userSignUpAgreeWith,
+    TResult? Function(bool? value)? userSignUpAgreeWith,
     TResult? Function()? userShowSignUpPassword,
+    TResult? Function()? userRegisterButton,
   }) {
     return userSignUpPhone?.call(value);
   }
@@ -1123,8 +1161,9 @@ class _$UserSignUpPhoneEventImpl implements UserSignUpPhoneEvent {
     TResult Function(String value)? userSignUpLastName,
     TResult Function(String value)? userSignUpPhone,
     TResult Function(String value)? userSignUpCountryCode,
-    TResult Function()? userSignUpAgreeWith,
+    TResult Function(bool? value)? userSignUpAgreeWith,
     TResult Function()? userShowSignUpPassword,
+    TResult Function()? userRegisterButton,
     required TResult orElse(),
   }) {
     if (userSignUpPhone != null) {
@@ -1150,6 +1189,7 @@ class _$UserSignUpPhoneEventImpl implements UserSignUpPhoneEvent {
         userSignUpAgreeWith,
     required TResult Function(UserShowSignUpPasswordEvent value)
         userShowSignUpPassword,
+    required TResult Function(UserRegisterButtonEvent value) userRegisterButton,
   }) {
     return userSignUpPhone(this);
   }
@@ -1168,6 +1208,7 @@ class _$UserSignUpPhoneEventImpl implements UserSignUpPhoneEvent {
     TResult? Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult? Function(UserShowSignUpPasswordEvent value)?
         userShowSignUpPassword,
+    TResult? Function(UserRegisterButtonEvent value)? userRegisterButton,
   }) {
     return userSignUpPhone?.call(this);
   }
@@ -1184,6 +1225,7 @@ class _$UserSignUpPhoneEventImpl implements UserSignUpPhoneEvent {
     TResult Function(UserSignUpCountryCodeEvent value)? userSignUpCountryCode,
     TResult Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult Function(UserShowSignUpPasswordEvent value)? userShowSignUpPassword,
+    TResult Function(UserRegisterButtonEvent value)? userRegisterButton,
     required TResult orElse(),
   }) {
     if (userSignUpPhone != null) {
@@ -1277,8 +1319,9 @@ class _$UserSignUpCountryCodeEventImpl implements UserSignUpCountryCodeEvent {
     required TResult Function(String value) userSignUpLastName,
     required TResult Function(String value) userSignUpPhone,
     required TResult Function(String value) userSignUpCountryCode,
-    required TResult Function() userSignUpAgreeWith,
+    required TResult Function(bool? value) userSignUpAgreeWith,
     required TResult Function() userShowSignUpPassword,
+    required TResult Function() userRegisterButton,
   }) {
     return userSignUpCountryCode(value);
   }
@@ -1293,8 +1336,9 @@ class _$UserSignUpCountryCodeEventImpl implements UserSignUpCountryCodeEvent {
     TResult? Function(String value)? userSignUpLastName,
     TResult? Function(String value)? userSignUpPhone,
     TResult? Function(String value)? userSignUpCountryCode,
-    TResult? Function()? userSignUpAgreeWith,
+    TResult? Function(bool? value)? userSignUpAgreeWith,
     TResult? Function()? userShowSignUpPassword,
+    TResult? Function()? userRegisterButton,
   }) {
     return userSignUpCountryCode?.call(value);
   }
@@ -1309,8 +1353,9 @@ class _$UserSignUpCountryCodeEventImpl implements UserSignUpCountryCodeEvent {
     TResult Function(String value)? userSignUpLastName,
     TResult Function(String value)? userSignUpPhone,
     TResult Function(String value)? userSignUpCountryCode,
-    TResult Function()? userSignUpAgreeWith,
+    TResult Function(bool? value)? userSignUpAgreeWith,
     TResult Function()? userShowSignUpPassword,
+    TResult Function()? userRegisterButton,
     required TResult orElse(),
   }) {
     if (userSignUpCountryCode != null) {
@@ -1336,6 +1381,7 @@ class _$UserSignUpCountryCodeEventImpl implements UserSignUpCountryCodeEvent {
         userSignUpAgreeWith,
     required TResult Function(UserShowSignUpPasswordEvent value)
         userShowSignUpPassword,
+    required TResult Function(UserRegisterButtonEvent value) userRegisterButton,
   }) {
     return userSignUpCountryCode(this);
   }
@@ -1354,6 +1400,7 @@ class _$UserSignUpCountryCodeEventImpl implements UserSignUpCountryCodeEvent {
     TResult? Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult? Function(UserShowSignUpPasswordEvent value)?
         userShowSignUpPassword,
+    TResult? Function(UserRegisterButtonEvent value)? userRegisterButton,
   }) {
     return userSignUpCountryCode?.call(this);
   }
@@ -1370,6 +1417,7 @@ class _$UserSignUpCountryCodeEventImpl implements UserSignUpCountryCodeEvent {
     TResult Function(UserSignUpCountryCodeEvent value)? userSignUpCountryCode,
     TResult Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult Function(UserShowSignUpPasswordEvent value)? userShowSignUpPassword,
+    TResult Function(UserRegisterButtonEvent value)? userRegisterButton,
     required TResult orElse(),
   }) {
     if (userSignUpCountryCode != null) {
@@ -1395,6 +1443,8 @@ abstract class _$$UserSignUpAgreeWithEventImplCopyWith<$Res> {
           _$UserSignUpAgreeWithEventImpl value,
           $Res Function(_$UserSignUpAgreeWithEventImpl) then) =
       __$$UserSignUpAgreeWithEventImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool? value});
 }
 
 /// @nodoc
@@ -1405,27 +1455,51 @@ class __$$UserSignUpAgreeWithEventImplCopyWithImpl<$Res>
       _$UserSignUpAgreeWithEventImpl _value,
       $Res Function(_$UserSignUpAgreeWithEventImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = freezed,
+  }) {
+    return _then(_$UserSignUpAgreeWithEventImpl(
+      freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$UserSignUpAgreeWithEventImpl implements UserSignUpAgreeWithEvent {
-  const _$UserSignUpAgreeWithEventImpl();
+  const _$UserSignUpAgreeWithEventImpl(this.value);
+
+  @override
+  final bool? value;
 
   @override
   String toString() {
-    return 'SignUpEvent.userSignUpAgreeWith()';
+    return 'SignUpEvent.userSignUpAgreeWith(value: $value)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UserSignUpAgreeWithEventImpl);
+            other is _$UserSignUpAgreeWithEventImpl &&
+            (identical(other.value, value) || other.value == value));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, value);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UserSignUpAgreeWithEventImplCopyWith<_$UserSignUpAgreeWithEventImpl>
+      get copyWith => __$$UserSignUpAgreeWithEventImplCopyWithImpl<
+          _$UserSignUpAgreeWithEventImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1437,10 +1511,11 @@ class _$UserSignUpAgreeWithEventImpl implements UserSignUpAgreeWithEvent {
     required TResult Function(String value) userSignUpLastName,
     required TResult Function(String value) userSignUpPhone,
     required TResult Function(String value) userSignUpCountryCode,
-    required TResult Function() userSignUpAgreeWith,
+    required TResult Function(bool? value) userSignUpAgreeWith,
     required TResult Function() userShowSignUpPassword,
+    required TResult Function() userRegisterButton,
   }) {
-    return userSignUpAgreeWith();
+    return userSignUpAgreeWith(value);
   }
 
   @override
@@ -1453,10 +1528,11 @@ class _$UserSignUpAgreeWithEventImpl implements UserSignUpAgreeWithEvent {
     TResult? Function(String value)? userSignUpLastName,
     TResult? Function(String value)? userSignUpPhone,
     TResult? Function(String value)? userSignUpCountryCode,
-    TResult? Function()? userSignUpAgreeWith,
+    TResult? Function(bool? value)? userSignUpAgreeWith,
     TResult? Function()? userShowSignUpPassword,
+    TResult? Function()? userRegisterButton,
   }) {
-    return userSignUpAgreeWith?.call();
+    return userSignUpAgreeWith?.call(value);
   }
 
   @override
@@ -1469,12 +1545,13 @@ class _$UserSignUpAgreeWithEventImpl implements UserSignUpAgreeWithEvent {
     TResult Function(String value)? userSignUpLastName,
     TResult Function(String value)? userSignUpPhone,
     TResult Function(String value)? userSignUpCountryCode,
-    TResult Function()? userSignUpAgreeWith,
+    TResult Function(bool? value)? userSignUpAgreeWith,
     TResult Function()? userShowSignUpPassword,
+    TResult Function()? userRegisterButton,
     required TResult orElse(),
   }) {
     if (userSignUpAgreeWith != null) {
-      return userSignUpAgreeWith();
+      return userSignUpAgreeWith(value);
     }
     return orElse();
   }
@@ -1496,6 +1573,7 @@ class _$UserSignUpAgreeWithEventImpl implements UserSignUpAgreeWithEvent {
         userSignUpAgreeWith,
     required TResult Function(UserShowSignUpPasswordEvent value)
         userShowSignUpPassword,
+    required TResult Function(UserRegisterButtonEvent value) userRegisterButton,
   }) {
     return userSignUpAgreeWith(this);
   }
@@ -1514,6 +1592,7 @@ class _$UserSignUpAgreeWithEventImpl implements UserSignUpAgreeWithEvent {
     TResult? Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult? Function(UserShowSignUpPasswordEvent value)?
         userShowSignUpPassword,
+    TResult? Function(UserRegisterButtonEvent value)? userRegisterButton,
   }) {
     return userSignUpAgreeWith?.call(this);
   }
@@ -1530,6 +1609,7 @@ class _$UserSignUpAgreeWithEventImpl implements UserSignUpAgreeWithEvent {
     TResult Function(UserSignUpCountryCodeEvent value)? userSignUpCountryCode,
     TResult Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult Function(UserShowSignUpPasswordEvent value)? userShowSignUpPassword,
+    TResult Function(UserRegisterButtonEvent value)? userRegisterButton,
     required TResult orElse(),
   }) {
     if (userSignUpAgreeWith != null) {
@@ -1540,7 +1620,13 @@ class _$UserSignUpAgreeWithEventImpl implements UserSignUpAgreeWithEvent {
 }
 
 abstract class UserSignUpAgreeWithEvent implements SignUpEvent {
-  const factory UserSignUpAgreeWithEvent() = _$UserSignUpAgreeWithEventImpl;
+  const factory UserSignUpAgreeWithEvent(final bool? value) =
+      _$UserSignUpAgreeWithEventImpl;
+
+  bool? get value;
+  @JsonKey(ignore: true)
+  _$$UserSignUpAgreeWithEventImplCopyWith<_$UserSignUpAgreeWithEventImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1591,8 +1677,9 @@ class _$UserShowSignUpPasswordEventImpl implements UserShowSignUpPasswordEvent {
     required TResult Function(String value) userSignUpLastName,
     required TResult Function(String value) userSignUpPhone,
     required TResult Function(String value) userSignUpCountryCode,
-    required TResult Function() userSignUpAgreeWith,
+    required TResult Function(bool? value) userSignUpAgreeWith,
     required TResult Function() userShowSignUpPassword,
+    required TResult Function() userRegisterButton,
   }) {
     return userShowSignUpPassword();
   }
@@ -1607,8 +1694,9 @@ class _$UserShowSignUpPasswordEventImpl implements UserShowSignUpPasswordEvent {
     TResult? Function(String value)? userSignUpLastName,
     TResult? Function(String value)? userSignUpPhone,
     TResult? Function(String value)? userSignUpCountryCode,
-    TResult? Function()? userSignUpAgreeWith,
+    TResult? Function(bool? value)? userSignUpAgreeWith,
     TResult? Function()? userShowSignUpPassword,
+    TResult? Function()? userRegisterButton,
   }) {
     return userShowSignUpPassword?.call();
   }
@@ -1623,8 +1711,9 @@ class _$UserShowSignUpPasswordEventImpl implements UserShowSignUpPasswordEvent {
     TResult Function(String value)? userSignUpLastName,
     TResult Function(String value)? userSignUpPhone,
     TResult Function(String value)? userSignUpCountryCode,
-    TResult Function()? userSignUpAgreeWith,
+    TResult Function(bool? value)? userSignUpAgreeWith,
     TResult Function()? userShowSignUpPassword,
+    TResult Function()? userRegisterButton,
     required TResult orElse(),
   }) {
     if (userShowSignUpPassword != null) {
@@ -1650,6 +1739,7 @@ class _$UserShowSignUpPasswordEventImpl implements UserShowSignUpPasswordEvent {
         userSignUpAgreeWith,
     required TResult Function(UserShowSignUpPasswordEvent value)
         userShowSignUpPassword,
+    required TResult Function(UserRegisterButtonEvent value) userRegisterButton,
   }) {
     return userShowSignUpPassword(this);
   }
@@ -1668,6 +1758,7 @@ class _$UserShowSignUpPasswordEventImpl implements UserShowSignUpPasswordEvent {
     TResult? Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult? Function(UserShowSignUpPasswordEvent value)?
         userShowSignUpPassword,
+    TResult? Function(UserRegisterButtonEvent value)? userRegisterButton,
   }) {
     return userShowSignUpPassword?.call(this);
   }
@@ -1684,6 +1775,7 @@ class _$UserShowSignUpPasswordEventImpl implements UserShowSignUpPasswordEvent {
     TResult Function(UserSignUpCountryCodeEvent value)? userSignUpCountryCode,
     TResult Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
     TResult Function(UserShowSignUpPasswordEvent value)? userShowSignUpPassword,
+    TResult Function(UserRegisterButtonEvent value)? userRegisterButton,
     required TResult orElse(),
   }) {
     if (userShowSignUpPassword != null) {
@@ -1696,6 +1788,166 @@ class _$UserShowSignUpPasswordEventImpl implements UserShowSignUpPasswordEvent {
 abstract class UserShowSignUpPasswordEvent implements SignUpEvent {
   const factory UserShowSignUpPasswordEvent() =
       _$UserShowSignUpPasswordEventImpl;
+}
+
+/// @nodoc
+abstract class _$$UserRegisterButtonEventImplCopyWith<$Res> {
+  factory _$$UserRegisterButtonEventImplCopyWith(
+          _$UserRegisterButtonEventImpl value,
+          $Res Function(_$UserRegisterButtonEventImpl) then) =
+      __$$UserRegisterButtonEventImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UserRegisterButtonEventImplCopyWithImpl<$Res>
+    extends _$SignUpEventCopyWithImpl<$Res, _$UserRegisterButtonEventImpl>
+    implements _$$UserRegisterButtonEventImplCopyWith<$Res> {
+  __$$UserRegisterButtonEventImplCopyWithImpl(
+      _$UserRegisterButtonEventImpl _value,
+      $Res Function(_$UserRegisterButtonEventImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UserRegisterButtonEventImpl implements UserRegisterButtonEvent {
+  const _$UserRegisterButtonEventImpl();
+
+  @override
+  String toString() {
+    return 'SignUpEvent.userRegisterButton()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UserRegisterButtonEventImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String value) userSignUpEmailAddress,
+    required TResult Function(String value) userSignUpPassword,
+    required TResult Function(String value) userSignUpFirstName,
+    required TResult Function(String value) userSignUpLastName,
+    required TResult Function(String value) userSignUpPhone,
+    required TResult Function(String value) userSignUpCountryCode,
+    required TResult Function(bool? value) userSignUpAgreeWith,
+    required TResult Function() userShowSignUpPassword,
+    required TResult Function() userRegisterButton,
+  }) {
+    return userRegisterButton();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(String value)? userSignUpEmailAddress,
+    TResult? Function(String value)? userSignUpPassword,
+    TResult? Function(String value)? userSignUpFirstName,
+    TResult? Function(String value)? userSignUpLastName,
+    TResult? Function(String value)? userSignUpPhone,
+    TResult? Function(String value)? userSignUpCountryCode,
+    TResult? Function(bool? value)? userSignUpAgreeWith,
+    TResult? Function()? userShowSignUpPassword,
+    TResult? Function()? userRegisterButton,
+  }) {
+    return userRegisterButton?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String value)? userSignUpEmailAddress,
+    TResult Function(String value)? userSignUpPassword,
+    TResult Function(String value)? userSignUpFirstName,
+    TResult Function(String value)? userSignUpLastName,
+    TResult Function(String value)? userSignUpPhone,
+    TResult Function(String value)? userSignUpCountryCode,
+    TResult Function(bool? value)? userSignUpAgreeWith,
+    TResult Function()? userShowSignUpPassword,
+    TResult Function()? userRegisterButton,
+    required TResult orElse(),
+  }) {
+    if (userRegisterButton != null) {
+      return userRegisterButton();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(UserSignUpEmailAddressEvent value)
+        userSignUpEmailAddress,
+    required TResult Function(UserSignUpPasswordEvent value) userSignUpPassword,
+    required TResult Function(UserSignUFirstNameEvent value)
+        userSignUpFirstName,
+    required TResult Function(UserSignUpLastNameEvent value) userSignUpLastName,
+    required TResult Function(UserSignUpPhoneEvent value) userSignUpPhone,
+    required TResult Function(UserSignUpCountryCodeEvent value)
+        userSignUpCountryCode,
+    required TResult Function(UserSignUpAgreeWithEvent value)
+        userSignUpAgreeWith,
+    required TResult Function(UserShowSignUpPasswordEvent value)
+        userShowSignUpPassword,
+    required TResult Function(UserRegisterButtonEvent value) userRegisterButton,
+  }) {
+    return userRegisterButton(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(UserSignUpEmailAddressEvent value)?
+        userSignUpEmailAddress,
+    TResult? Function(UserSignUpPasswordEvent value)? userSignUpPassword,
+    TResult? Function(UserSignUFirstNameEvent value)? userSignUpFirstName,
+    TResult? Function(UserSignUpLastNameEvent value)? userSignUpLastName,
+    TResult? Function(UserSignUpPhoneEvent value)? userSignUpPhone,
+    TResult? Function(UserSignUpCountryCodeEvent value)? userSignUpCountryCode,
+    TResult? Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
+    TResult? Function(UserShowSignUpPasswordEvent value)?
+        userShowSignUpPassword,
+    TResult? Function(UserRegisterButtonEvent value)? userRegisterButton,
+  }) {
+    return userRegisterButton?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(UserSignUpEmailAddressEvent value)? userSignUpEmailAddress,
+    TResult Function(UserSignUpPasswordEvent value)? userSignUpPassword,
+    TResult Function(UserSignUFirstNameEvent value)? userSignUpFirstName,
+    TResult Function(UserSignUpLastNameEvent value)? userSignUpLastName,
+    TResult Function(UserSignUpPhoneEvent value)? userSignUpPhone,
+    TResult Function(UserSignUpCountryCodeEvent value)? userSignUpCountryCode,
+    TResult Function(UserSignUpAgreeWithEvent value)? userSignUpAgreeWith,
+    TResult Function(UserShowSignUpPasswordEvent value)? userShowSignUpPassword,
+    TResult Function(UserRegisterButtonEvent value)? userRegisterButton,
+    required TResult orElse(),
+  }) {
+    if (userRegisterButton != null) {
+      return userRegisterButton(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UserRegisterButtonEvent implements SignUpEvent {
+  const factory UserRegisterButtonEvent() = _$UserRegisterButtonEventImpl;
 }
 
 /// @nodoc
@@ -1712,6 +1964,9 @@ mixin _$SignUpState {
     required TResult Function(bool value) showUserSignUpPassword,
     required TResult Function(bool value) buttonSignUpVaildation,
     required TResult Function(bool value) signUpAgreeWith,
+    required TResult Function() loading,
+    required TResult Function(int statesCode, String errorMessage) error,
+    required TResult Function(RegisterResponse data) suceess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1726,6 +1981,9 @@ mixin _$SignUpState {
     TResult? Function(bool value)? showUserSignUpPassword,
     TResult? Function(bool value)? buttonSignUpVaildation,
     TResult? Function(bool value)? signUpAgreeWith,
+    TResult? Function()? loading,
+    TResult? Function(int statesCode, String errorMessage)? error,
+    TResult? Function(RegisterResponse data)? suceess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1740,6 +1998,9 @@ mixin _$SignUpState {
     TResult Function(bool value)? showUserSignUpPassword,
     TResult Function(bool value)? buttonSignUpVaildation,
     TResult Function(bool value)? signUpAgreeWith,
+    TResult Function()? loading,
+    TResult Function(int statesCode, String errorMessage)? error,
+    TResult Function(RegisterResponse data)? suceess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1760,6 +2021,9 @@ mixin _$SignUpState {
     required TResult Function(ButtonSignUpVaildationState value)
         buttonSignUpVaildation,
     required TResult Function(signUpAgreeWithState value) signUpAgreeWith,
+    required TResult Function(SignUpButtonLoadingData value) loading,
+    required TResult Function(SignUpButtonErrorData value) error,
+    required TResult Function(SignUpButtonSuccessData value) suceess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1777,6 +2041,9 @@ mixin _$SignUpState {
     TResult? Function(ButtonSignUpVaildationState value)?
         buttonSignUpVaildation,
     TResult? Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult? Function(SignUpButtonLoadingData value)? loading,
+    TResult? Function(SignUpButtonErrorData value)? error,
+    TResult? Function(SignUpButtonSuccessData value)? suceess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1791,6 +2058,9 @@ mixin _$SignUpState {
     TResult Function(ShowUserSignUpPasswordState value)? showUserSignUpPassword,
     TResult Function(ButtonSignUpVaildationState value)? buttonSignUpVaildation,
     TResult Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult Function(SignUpButtonLoadingData value)? loading,
+    TResult Function(SignUpButtonErrorData value)? error,
+    TResult Function(SignUpButtonSuccessData value)? suceess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1862,6 +2132,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(bool value) showUserSignUpPassword,
     required TResult Function(bool value) buttonSignUpVaildation,
     required TResult Function(bool value) signUpAgreeWith,
+    required TResult Function() loading,
+    required TResult Function(int statesCode, String errorMessage) error,
+    required TResult Function(RegisterResponse data) suceess,
   }) {
     return initial();
   }
@@ -1879,6 +2152,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(bool value)? showUserSignUpPassword,
     TResult? Function(bool value)? buttonSignUpVaildation,
     TResult? Function(bool value)? signUpAgreeWith,
+    TResult? Function()? loading,
+    TResult? Function(int statesCode, String errorMessage)? error,
+    TResult? Function(RegisterResponse data)? suceess,
   }) {
     return initial?.call();
   }
@@ -1896,6 +2172,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(bool value)? showUserSignUpPassword,
     TResult Function(bool value)? buttonSignUpVaildation,
     TResult Function(bool value)? signUpAgreeWith,
+    TResult Function()? loading,
+    TResult Function(int statesCode, String errorMessage)? error,
+    TResult Function(RegisterResponse data)? suceess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1922,6 +2201,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(ButtonSignUpVaildationState value)
         buttonSignUpVaildation,
     required TResult Function(signUpAgreeWithState value) signUpAgreeWith,
+    required TResult Function(SignUpButtonLoadingData value) loading,
+    required TResult Function(SignUpButtonErrorData value) error,
+    required TResult Function(SignUpButtonSuccessData value) suceess,
   }) {
     return initial(this);
   }
@@ -1942,6 +2224,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(ButtonSignUpVaildationState value)?
         buttonSignUpVaildation,
     TResult? Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult? Function(SignUpButtonLoadingData value)? loading,
+    TResult? Function(SignUpButtonErrorData value)? error,
+    TResult? Function(SignUpButtonSuccessData value)? suceess,
   }) {
     return initial?.call(this);
   }
@@ -1959,6 +2244,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(ShowUserSignUpPasswordState value)? showUserSignUpPassword,
     TResult Function(ButtonSignUpVaildationState value)? buttonSignUpVaildation,
     TResult Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult Function(SignUpButtonLoadingData value)? loading,
+    TResult Function(SignUpButtonErrorData value)? error,
+    TResult Function(SignUpButtonSuccessData value)? suceess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -2049,6 +2337,9 @@ class _$UserSignUpEmailAddressStateImpl implements UserSignUpEmailAddressState {
     required TResult Function(bool value) showUserSignUpPassword,
     required TResult Function(bool value) buttonSignUpVaildation,
     required TResult Function(bool value) signUpAgreeWith,
+    required TResult Function() loading,
+    required TResult Function(int statesCode, String errorMessage) error,
+    required TResult Function(RegisterResponse data) suceess,
   }) {
     return userSignUpEmailAddress(value);
   }
@@ -2066,6 +2357,9 @@ class _$UserSignUpEmailAddressStateImpl implements UserSignUpEmailAddressState {
     TResult? Function(bool value)? showUserSignUpPassword,
     TResult? Function(bool value)? buttonSignUpVaildation,
     TResult? Function(bool value)? signUpAgreeWith,
+    TResult? Function()? loading,
+    TResult? Function(int statesCode, String errorMessage)? error,
+    TResult? Function(RegisterResponse data)? suceess,
   }) {
     return userSignUpEmailAddress?.call(value);
   }
@@ -2083,6 +2377,9 @@ class _$UserSignUpEmailAddressStateImpl implements UserSignUpEmailAddressState {
     TResult Function(bool value)? showUserSignUpPassword,
     TResult Function(bool value)? buttonSignUpVaildation,
     TResult Function(bool value)? signUpAgreeWith,
+    TResult Function()? loading,
+    TResult Function(int statesCode, String errorMessage)? error,
+    TResult Function(RegisterResponse data)? suceess,
     required TResult orElse(),
   }) {
     if (userSignUpEmailAddress != null) {
@@ -2109,6 +2406,9 @@ class _$UserSignUpEmailAddressStateImpl implements UserSignUpEmailAddressState {
     required TResult Function(ButtonSignUpVaildationState value)
         buttonSignUpVaildation,
     required TResult Function(signUpAgreeWithState value) signUpAgreeWith,
+    required TResult Function(SignUpButtonLoadingData value) loading,
+    required TResult Function(SignUpButtonErrorData value) error,
+    required TResult Function(SignUpButtonSuccessData value) suceess,
   }) {
     return userSignUpEmailAddress(this);
   }
@@ -2129,6 +2429,9 @@ class _$UserSignUpEmailAddressStateImpl implements UserSignUpEmailAddressState {
     TResult? Function(ButtonSignUpVaildationState value)?
         buttonSignUpVaildation,
     TResult? Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult? Function(SignUpButtonLoadingData value)? loading,
+    TResult? Function(SignUpButtonErrorData value)? error,
+    TResult? Function(SignUpButtonSuccessData value)? suceess,
   }) {
     return userSignUpEmailAddress?.call(this);
   }
@@ -2146,6 +2449,9 @@ class _$UserSignUpEmailAddressStateImpl implements UserSignUpEmailAddressState {
     TResult Function(ShowUserSignUpPasswordState value)? showUserSignUpPassword,
     TResult Function(ButtonSignUpVaildationState value)? buttonSignUpVaildation,
     TResult Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult Function(SignUpButtonLoadingData value)? loading,
+    TResult Function(SignUpButtonErrorData value)? error,
+    TResult Function(SignUpButtonSuccessData value)? suceess,
     required TResult orElse(),
   }) {
     if (userSignUpEmailAddress != null) {
@@ -2242,6 +2548,9 @@ class _$UserSignUpPasswordStateImpl implements UserSignUpPasswordState {
     required TResult Function(bool value) showUserSignUpPassword,
     required TResult Function(bool value) buttonSignUpVaildation,
     required TResult Function(bool value) signUpAgreeWith,
+    required TResult Function() loading,
+    required TResult Function(int statesCode, String errorMessage) error,
+    required TResult Function(RegisterResponse data) suceess,
   }) {
     return userSignUpPassword(value);
   }
@@ -2259,6 +2568,9 @@ class _$UserSignUpPasswordStateImpl implements UserSignUpPasswordState {
     TResult? Function(bool value)? showUserSignUpPassword,
     TResult? Function(bool value)? buttonSignUpVaildation,
     TResult? Function(bool value)? signUpAgreeWith,
+    TResult? Function()? loading,
+    TResult? Function(int statesCode, String errorMessage)? error,
+    TResult? Function(RegisterResponse data)? suceess,
   }) {
     return userSignUpPassword?.call(value);
   }
@@ -2276,6 +2588,9 @@ class _$UserSignUpPasswordStateImpl implements UserSignUpPasswordState {
     TResult Function(bool value)? showUserSignUpPassword,
     TResult Function(bool value)? buttonSignUpVaildation,
     TResult Function(bool value)? signUpAgreeWith,
+    TResult Function()? loading,
+    TResult Function(int statesCode, String errorMessage)? error,
+    TResult Function(RegisterResponse data)? suceess,
     required TResult orElse(),
   }) {
     if (userSignUpPassword != null) {
@@ -2302,6 +2617,9 @@ class _$UserSignUpPasswordStateImpl implements UserSignUpPasswordState {
     required TResult Function(ButtonSignUpVaildationState value)
         buttonSignUpVaildation,
     required TResult Function(signUpAgreeWithState value) signUpAgreeWith,
+    required TResult Function(SignUpButtonLoadingData value) loading,
+    required TResult Function(SignUpButtonErrorData value) error,
+    required TResult Function(SignUpButtonSuccessData value) suceess,
   }) {
     return userSignUpPassword(this);
   }
@@ -2322,6 +2640,9 @@ class _$UserSignUpPasswordStateImpl implements UserSignUpPasswordState {
     TResult? Function(ButtonSignUpVaildationState value)?
         buttonSignUpVaildation,
     TResult? Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult? Function(SignUpButtonLoadingData value)? loading,
+    TResult? Function(SignUpButtonErrorData value)? error,
+    TResult? Function(SignUpButtonSuccessData value)? suceess,
   }) {
     return userSignUpPassword?.call(this);
   }
@@ -2339,6 +2660,9 @@ class _$UserSignUpPasswordStateImpl implements UserSignUpPasswordState {
     TResult Function(ShowUserSignUpPasswordState value)? showUserSignUpPassword,
     TResult Function(ButtonSignUpVaildationState value)? buttonSignUpVaildation,
     TResult Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult Function(SignUpButtonLoadingData value)? loading,
+    TResult Function(SignUpButtonErrorData value)? error,
+    TResult Function(SignUpButtonSuccessData value)? suceess,
     required TResult orElse(),
   }) {
     if (userSignUpPassword != null) {
@@ -2435,6 +2759,9 @@ class _$UserSignUpFirstNameStateImpl implements UserSignUpFirstNameState {
     required TResult Function(bool value) showUserSignUpPassword,
     required TResult Function(bool value) buttonSignUpVaildation,
     required TResult Function(bool value) signUpAgreeWith,
+    required TResult Function() loading,
+    required TResult Function(int statesCode, String errorMessage) error,
+    required TResult Function(RegisterResponse data) suceess,
   }) {
     return userSignUpFirstName(value);
   }
@@ -2452,6 +2779,9 @@ class _$UserSignUpFirstNameStateImpl implements UserSignUpFirstNameState {
     TResult? Function(bool value)? showUserSignUpPassword,
     TResult? Function(bool value)? buttonSignUpVaildation,
     TResult? Function(bool value)? signUpAgreeWith,
+    TResult? Function()? loading,
+    TResult? Function(int statesCode, String errorMessage)? error,
+    TResult? Function(RegisterResponse data)? suceess,
   }) {
     return userSignUpFirstName?.call(value);
   }
@@ -2469,6 +2799,9 @@ class _$UserSignUpFirstNameStateImpl implements UserSignUpFirstNameState {
     TResult Function(bool value)? showUserSignUpPassword,
     TResult Function(bool value)? buttonSignUpVaildation,
     TResult Function(bool value)? signUpAgreeWith,
+    TResult Function()? loading,
+    TResult Function(int statesCode, String errorMessage)? error,
+    TResult Function(RegisterResponse data)? suceess,
     required TResult orElse(),
   }) {
     if (userSignUpFirstName != null) {
@@ -2495,6 +2828,9 @@ class _$UserSignUpFirstNameStateImpl implements UserSignUpFirstNameState {
     required TResult Function(ButtonSignUpVaildationState value)
         buttonSignUpVaildation,
     required TResult Function(signUpAgreeWithState value) signUpAgreeWith,
+    required TResult Function(SignUpButtonLoadingData value) loading,
+    required TResult Function(SignUpButtonErrorData value) error,
+    required TResult Function(SignUpButtonSuccessData value) suceess,
   }) {
     return userSignUpFirstName(this);
   }
@@ -2515,6 +2851,9 @@ class _$UserSignUpFirstNameStateImpl implements UserSignUpFirstNameState {
     TResult? Function(ButtonSignUpVaildationState value)?
         buttonSignUpVaildation,
     TResult? Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult? Function(SignUpButtonLoadingData value)? loading,
+    TResult? Function(SignUpButtonErrorData value)? error,
+    TResult? Function(SignUpButtonSuccessData value)? suceess,
   }) {
     return userSignUpFirstName?.call(this);
   }
@@ -2532,6 +2871,9 @@ class _$UserSignUpFirstNameStateImpl implements UserSignUpFirstNameState {
     TResult Function(ShowUserSignUpPasswordState value)? showUserSignUpPassword,
     TResult Function(ButtonSignUpVaildationState value)? buttonSignUpVaildation,
     TResult Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult Function(SignUpButtonLoadingData value)? loading,
+    TResult Function(SignUpButtonErrorData value)? error,
+    TResult Function(SignUpButtonSuccessData value)? suceess,
     required TResult orElse(),
   }) {
     if (userSignUpFirstName != null) {
@@ -2628,6 +2970,9 @@ class _$UserSignUpLastNameStateImpl implements UserSignUpLastNameState {
     required TResult Function(bool value) showUserSignUpPassword,
     required TResult Function(bool value) buttonSignUpVaildation,
     required TResult Function(bool value) signUpAgreeWith,
+    required TResult Function() loading,
+    required TResult Function(int statesCode, String errorMessage) error,
+    required TResult Function(RegisterResponse data) suceess,
   }) {
     return userSignUpLastName(value);
   }
@@ -2645,6 +2990,9 @@ class _$UserSignUpLastNameStateImpl implements UserSignUpLastNameState {
     TResult? Function(bool value)? showUserSignUpPassword,
     TResult? Function(bool value)? buttonSignUpVaildation,
     TResult? Function(bool value)? signUpAgreeWith,
+    TResult? Function()? loading,
+    TResult? Function(int statesCode, String errorMessage)? error,
+    TResult? Function(RegisterResponse data)? suceess,
   }) {
     return userSignUpLastName?.call(value);
   }
@@ -2662,6 +3010,9 @@ class _$UserSignUpLastNameStateImpl implements UserSignUpLastNameState {
     TResult Function(bool value)? showUserSignUpPassword,
     TResult Function(bool value)? buttonSignUpVaildation,
     TResult Function(bool value)? signUpAgreeWith,
+    TResult Function()? loading,
+    TResult Function(int statesCode, String errorMessage)? error,
+    TResult Function(RegisterResponse data)? suceess,
     required TResult orElse(),
   }) {
     if (userSignUpLastName != null) {
@@ -2688,6 +3039,9 @@ class _$UserSignUpLastNameStateImpl implements UserSignUpLastNameState {
     required TResult Function(ButtonSignUpVaildationState value)
         buttonSignUpVaildation,
     required TResult Function(signUpAgreeWithState value) signUpAgreeWith,
+    required TResult Function(SignUpButtonLoadingData value) loading,
+    required TResult Function(SignUpButtonErrorData value) error,
+    required TResult Function(SignUpButtonSuccessData value) suceess,
   }) {
     return userSignUpLastName(this);
   }
@@ -2708,6 +3062,9 @@ class _$UserSignUpLastNameStateImpl implements UserSignUpLastNameState {
     TResult? Function(ButtonSignUpVaildationState value)?
         buttonSignUpVaildation,
     TResult? Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult? Function(SignUpButtonLoadingData value)? loading,
+    TResult? Function(SignUpButtonErrorData value)? error,
+    TResult? Function(SignUpButtonSuccessData value)? suceess,
   }) {
     return userSignUpLastName?.call(this);
   }
@@ -2725,6 +3082,9 @@ class _$UserSignUpLastNameStateImpl implements UserSignUpLastNameState {
     TResult Function(ShowUserSignUpPasswordState value)? showUserSignUpPassword,
     TResult Function(ButtonSignUpVaildationState value)? buttonSignUpVaildation,
     TResult Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult Function(SignUpButtonLoadingData value)? loading,
+    TResult Function(SignUpButtonErrorData value)? error,
+    TResult Function(SignUpButtonSuccessData value)? suceess,
     required TResult orElse(),
   }) {
     if (userSignUpLastName != null) {
@@ -2820,6 +3180,9 @@ class _$UserSignUpPhoneStateImpl implements UserSignUpPhoneState {
     required TResult Function(bool value) showUserSignUpPassword,
     required TResult Function(bool value) buttonSignUpVaildation,
     required TResult Function(bool value) signUpAgreeWith,
+    required TResult Function() loading,
+    required TResult Function(int statesCode, String errorMessage) error,
+    required TResult Function(RegisterResponse data) suceess,
   }) {
     return userSignUpPhone(value);
   }
@@ -2837,6 +3200,9 @@ class _$UserSignUpPhoneStateImpl implements UserSignUpPhoneState {
     TResult? Function(bool value)? showUserSignUpPassword,
     TResult? Function(bool value)? buttonSignUpVaildation,
     TResult? Function(bool value)? signUpAgreeWith,
+    TResult? Function()? loading,
+    TResult? Function(int statesCode, String errorMessage)? error,
+    TResult? Function(RegisterResponse data)? suceess,
   }) {
     return userSignUpPhone?.call(value);
   }
@@ -2854,6 +3220,9 @@ class _$UserSignUpPhoneStateImpl implements UserSignUpPhoneState {
     TResult Function(bool value)? showUserSignUpPassword,
     TResult Function(bool value)? buttonSignUpVaildation,
     TResult Function(bool value)? signUpAgreeWith,
+    TResult Function()? loading,
+    TResult Function(int statesCode, String errorMessage)? error,
+    TResult Function(RegisterResponse data)? suceess,
     required TResult orElse(),
   }) {
     if (userSignUpPhone != null) {
@@ -2880,6 +3249,9 @@ class _$UserSignUpPhoneStateImpl implements UserSignUpPhoneState {
     required TResult Function(ButtonSignUpVaildationState value)
         buttonSignUpVaildation,
     required TResult Function(signUpAgreeWithState value) signUpAgreeWith,
+    required TResult Function(SignUpButtonLoadingData value) loading,
+    required TResult Function(SignUpButtonErrorData value) error,
+    required TResult Function(SignUpButtonSuccessData value) suceess,
   }) {
     return userSignUpPhone(this);
   }
@@ -2900,6 +3272,9 @@ class _$UserSignUpPhoneStateImpl implements UserSignUpPhoneState {
     TResult? Function(ButtonSignUpVaildationState value)?
         buttonSignUpVaildation,
     TResult? Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult? Function(SignUpButtonLoadingData value)? loading,
+    TResult? Function(SignUpButtonErrorData value)? error,
+    TResult? Function(SignUpButtonSuccessData value)? suceess,
   }) {
     return userSignUpPhone?.call(this);
   }
@@ -2917,6 +3292,9 @@ class _$UserSignUpPhoneStateImpl implements UserSignUpPhoneState {
     TResult Function(ShowUserSignUpPasswordState value)? showUserSignUpPassword,
     TResult Function(ButtonSignUpVaildationState value)? buttonSignUpVaildation,
     TResult Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult Function(SignUpButtonLoadingData value)? loading,
+    TResult Function(SignUpButtonErrorData value)? error,
+    TResult Function(SignUpButtonSuccessData value)? suceess,
     required TResult orElse(),
   }) {
     if (userSignUpPhone != null) {
@@ -3013,6 +3391,9 @@ class _$UserSignUpCuntryCodeStateImpl implements UserSignUpCuntryCodeState {
     required TResult Function(bool value) showUserSignUpPassword,
     required TResult Function(bool value) buttonSignUpVaildation,
     required TResult Function(bool value) signUpAgreeWith,
+    required TResult Function() loading,
+    required TResult Function(int statesCode, String errorMessage) error,
+    required TResult Function(RegisterResponse data) suceess,
   }) {
     return userSignUpCuntryCode(value);
   }
@@ -3030,6 +3411,9 @@ class _$UserSignUpCuntryCodeStateImpl implements UserSignUpCuntryCodeState {
     TResult? Function(bool value)? showUserSignUpPassword,
     TResult? Function(bool value)? buttonSignUpVaildation,
     TResult? Function(bool value)? signUpAgreeWith,
+    TResult? Function()? loading,
+    TResult? Function(int statesCode, String errorMessage)? error,
+    TResult? Function(RegisterResponse data)? suceess,
   }) {
     return userSignUpCuntryCode?.call(value);
   }
@@ -3047,6 +3431,9 @@ class _$UserSignUpCuntryCodeStateImpl implements UserSignUpCuntryCodeState {
     TResult Function(bool value)? showUserSignUpPassword,
     TResult Function(bool value)? buttonSignUpVaildation,
     TResult Function(bool value)? signUpAgreeWith,
+    TResult Function()? loading,
+    TResult Function(int statesCode, String errorMessage)? error,
+    TResult Function(RegisterResponse data)? suceess,
     required TResult orElse(),
   }) {
     if (userSignUpCuntryCode != null) {
@@ -3073,6 +3460,9 @@ class _$UserSignUpCuntryCodeStateImpl implements UserSignUpCuntryCodeState {
     required TResult Function(ButtonSignUpVaildationState value)
         buttonSignUpVaildation,
     required TResult Function(signUpAgreeWithState value) signUpAgreeWith,
+    required TResult Function(SignUpButtonLoadingData value) loading,
+    required TResult Function(SignUpButtonErrorData value) error,
+    required TResult Function(SignUpButtonSuccessData value) suceess,
   }) {
     return userSignUpCuntryCode(this);
   }
@@ -3093,6 +3483,9 @@ class _$UserSignUpCuntryCodeStateImpl implements UserSignUpCuntryCodeState {
     TResult? Function(ButtonSignUpVaildationState value)?
         buttonSignUpVaildation,
     TResult? Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult? Function(SignUpButtonLoadingData value)? loading,
+    TResult? Function(SignUpButtonErrorData value)? error,
+    TResult? Function(SignUpButtonSuccessData value)? suceess,
   }) {
     return userSignUpCuntryCode?.call(this);
   }
@@ -3110,6 +3503,9 @@ class _$UserSignUpCuntryCodeStateImpl implements UserSignUpCuntryCodeState {
     TResult Function(ShowUserSignUpPasswordState value)? showUserSignUpPassword,
     TResult Function(ButtonSignUpVaildationState value)? buttonSignUpVaildation,
     TResult Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult Function(SignUpButtonLoadingData value)? loading,
+    TResult Function(SignUpButtonErrorData value)? error,
+    TResult Function(SignUpButtonSuccessData value)? suceess,
     required TResult orElse(),
   }) {
     if (userSignUpCuntryCode != null) {
@@ -3206,6 +3602,9 @@ class _$ShowUserSignUpPasswordStateImpl implements ShowUserSignUpPasswordState {
     required TResult Function(bool value) showUserSignUpPassword,
     required TResult Function(bool value) buttonSignUpVaildation,
     required TResult Function(bool value) signUpAgreeWith,
+    required TResult Function() loading,
+    required TResult Function(int statesCode, String errorMessage) error,
+    required TResult Function(RegisterResponse data) suceess,
   }) {
     return showUserSignUpPassword(value);
   }
@@ -3223,6 +3622,9 @@ class _$ShowUserSignUpPasswordStateImpl implements ShowUserSignUpPasswordState {
     TResult? Function(bool value)? showUserSignUpPassword,
     TResult? Function(bool value)? buttonSignUpVaildation,
     TResult? Function(bool value)? signUpAgreeWith,
+    TResult? Function()? loading,
+    TResult? Function(int statesCode, String errorMessage)? error,
+    TResult? Function(RegisterResponse data)? suceess,
   }) {
     return showUserSignUpPassword?.call(value);
   }
@@ -3240,6 +3642,9 @@ class _$ShowUserSignUpPasswordStateImpl implements ShowUserSignUpPasswordState {
     TResult Function(bool value)? showUserSignUpPassword,
     TResult Function(bool value)? buttonSignUpVaildation,
     TResult Function(bool value)? signUpAgreeWith,
+    TResult Function()? loading,
+    TResult Function(int statesCode, String errorMessage)? error,
+    TResult Function(RegisterResponse data)? suceess,
     required TResult orElse(),
   }) {
     if (showUserSignUpPassword != null) {
@@ -3266,6 +3671,9 @@ class _$ShowUserSignUpPasswordStateImpl implements ShowUserSignUpPasswordState {
     required TResult Function(ButtonSignUpVaildationState value)
         buttonSignUpVaildation,
     required TResult Function(signUpAgreeWithState value) signUpAgreeWith,
+    required TResult Function(SignUpButtonLoadingData value) loading,
+    required TResult Function(SignUpButtonErrorData value) error,
+    required TResult Function(SignUpButtonSuccessData value) suceess,
   }) {
     return showUserSignUpPassword(this);
   }
@@ -3286,6 +3694,9 @@ class _$ShowUserSignUpPasswordStateImpl implements ShowUserSignUpPasswordState {
     TResult? Function(ButtonSignUpVaildationState value)?
         buttonSignUpVaildation,
     TResult? Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult? Function(SignUpButtonLoadingData value)? loading,
+    TResult? Function(SignUpButtonErrorData value)? error,
+    TResult? Function(SignUpButtonSuccessData value)? suceess,
   }) {
     return showUserSignUpPassword?.call(this);
   }
@@ -3303,6 +3714,9 @@ class _$ShowUserSignUpPasswordStateImpl implements ShowUserSignUpPasswordState {
     TResult Function(ShowUserSignUpPasswordState value)? showUserSignUpPassword,
     TResult Function(ButtonSignUpVaildationState value)? buttonSignUpVaildation,
     TResult Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult Function(SignUpButtonLoadingData value)? loading,
+    TResult Function(SignUpButtonErrorData value)? error,
+    TResult Function(SignUpButtonSuccessData value)? suceess,
     required TResult orElse(),
   }) {
     if (showUserSignUpPassword != null) {
@@ -3399,6 +3813,9 @@ class _$ButtonSignUpVaildationStateImpl implements ButtonSignUpVaildationState {
     required TResult Function(bool value) showUserSignUpPassword,
     required TResult Function(bool value) buttonSignUpVaildation,
     required TResult Function(bool value) signUpAgreeWith,
+    required TResult Function() loading,
+    required TResult Function(int statesCode, String errorMessage) error,
+    required TResult Function(RegisterResponse data) suceess,
   }) {
     return buttonSignUpVaildation(value);
   }
@@ -3416,6 +3833,9 @@ class _$ButtonSignUpVaildationStateImpl implements ButtonSignUpVaildationState {
     TResult? Function(bool value)? showUserSignUpPassword,
     TResult? Function(bool value)? buttonSignUpVaildation,
     TResult? Function(bool value)? signUpAgreeWith,
+    TResult? Function()? loading,
+    TResult? Function(int statesCode, String errorMessage)? error,
+    TResult? Function(RegisterResponse data)? suceess,
   }) {
     return buttonSignUpVaildation?.call(value);
   }
@@ -3433,6 +3853,9 @@ class _$ButtonSignUpVaildationStateImpl implements ButtonSignUpVaildationState {
     TResult Function(bool value)? showUserSignUpPassword,
     TResult Function(bool value)? buttonSignUpVaildation,
     TResult Function(bool value)? signUpAgreeWith,
+    TResult Function()? loading,
+    TResult Function(int statesCode, String errorMessage)? error,
+    TResult Function(RegisterResponse data)? suceess,
     required TResult orElse(),
   }) {
     if (buttonSignUpVaildation != null) {
@@ -3459,6 +3882,9 @@ class _$ButtonSignUpVaildationStateImpl implements ButtonSignUpVaildationState {
     required TResult Function(ButtonSignUpVaildationState value)
         buttonSignUpVaildation,
     required TResult Function(signUpAgreeWithState value) signUpAgreeWith,
+    required TResult Function(SignUpButtonLoadingData value) loading,
+    required TResult Function(SignUpButtonErrorData value) error,
+    required TResult Function(SignUpButtonSuccessData value) suceess,
   }) {
     return buttonSignUpVaildation(this);
   }
@@ -3479,6 +3905,9 @@ class _$ButtonSignUpVaildationStateImpl implements ButtonSignUpVaildationState {
     TResult? Function(ButtonSignUpVaildationState value)?
         buttonSignUpVaildation,
     TResult? Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult? Function(SignUpButtonLoadingData value)? loading,
+    TResult? Function(SignUpButtonErrorData value)? error,
+    TResult? Function(SignUpButtonSuccessData value)? suceess,
   }) {
     return buttonSignUpVaildation?.call(this);
   }
@@ -3496,6 +3925,9 @@ class _$ButtonSignUpVaildationStateImpl implements ButtonSignUpVaildationState {
     TResult Function(ShowUserSignUpPasswordState value)? showUserSignUpPassword,
     TResult Function(ButtonSignUpVaildationState value)? buttonSignUpVaildation,
     TResult Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult Function(SignUpButtonLoadingData value)? loading,
+    TResult Function(SignUpButtonErrorData value)? error,
+    TResult Function(SignUpButtonSuccessData value)? suceess,
     required TResult orElse(),
   }) {
     if (buttonSignUpVaildation != null) {
@@ -3591,6 +4023,9 @@ class _$signUpAgreeWithStateImpl implements signUpAgreeWithState {
     required TResult Function(bool value) showUserSignUpPassword,
     required TResult Function(bool value) buttonSignUpVaildation,
     required TResult Function(bool value) signUpAgreeWith,
+    required TResult Function() loading,
+    required TResult Function(int statesCode, String errorMessage) error,
+    required TResult Function(RegisterResponse data) suceess,
   }) {
     return signUpAgreeWith(value);
   }
@@ -3608,6 +4043,9 @@ class _$signUpAgreeWithStateImpl implements signUpAgreeWithState {
     TResult? Function(bool value)? showUserSignUpPassword,
     TResult? Function(bool value)? buttonSignUpVaildation,
     TResult? Function(bool value)? signUpAgreeWith,
+    TResult? Function()? loading,
+    TResult? Function(int statesCode, String errorMessage)? error,
+    TResult? Function(RegisterResponse data)? suceess,
   }) {
     return signUpAgreeWith?.call(value);
   }
@@ -3625,6 +4063,9 @@ class _$signUpAgreeWithStateImpl implements signUpAgreeWithState {
     TResult Function(bool value)? showUserSignUpPassword,
     TResult Function(bool value)? buttonSignUpVaildation,
     TResult Function(bool value)? signUpAgreeWith,
+    TResult Function()? loading,
+    TResult Function(int statesCode, String errorMessage)? error,
+    TResult Function(RegisterResponse data)? suceess,
     required TResult orElse(),
   }) {
     if (signUpAgreeWith != null) {
@@ -3651,6 +4092,9 @@ class _$signUpAgreeWithStateImpl implements signUpAgreeWithState {
     required TResult Function(ButtonSignUpVaildationState value)
         buttonSignUpVaildation,
     required TResult Function(signUpAgreeWithState value) signUpAgreeWith,
+    required TResult Function(SignUpButtonLoadingData value) loading,
+    required TResult Function(SignUpButtonErrorData value) error,
+    required TResult Function(SignUpButtonSuccessData value) suceess,
   }) {
     return signUpAgreeWith(this);
   }
@@ -3671,6 +4115,9 @@ class _$signUpAgreeWithStateImpl implements signUpAgreeWithState {
     TResult? Function(ButtonSignUpVaildationState value)?
         buttonSignUpVaildation,
     TResult? Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult? Function(SignUpButtonLoadingData value)? loading,
+    TResult? Function(SignUpButtonErrorData value)? error,
+    TResult? Function(SignUpButtonSuccessData value)? suceess,
   }) {
     return signUpAgreeWith?.call(this);
   }
@@ -3688,6 +4135,9 @@ class _$signUpAgreeWithStateImpl implements signUpAgreeWithState {
     TResult Function(ShowUserSignUpPasswordState value)? showUserSignUpPassword,
     TResult Function(ButtonSignUpVaildationState value)? buttonSignUpVaildation,
     TResult Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult Function(SignUpButtonLoadingData value)? loading,
+    TResult Function(SignUpButtonErrorData value)? error,
+    TResult Function(SignUpButtonSuccessData value)? suceess,
     required TResult orElse(),
   }) {
     if (signUpAgreeWith != null) {
@@ -3704,5 +4154,618 @@ abstract class signUpAgreeWithState implements SignUpState {
   bool get value;
   @JsonKey(ignore: true)
   _$$signUpAgreeWithStateImplCopyWith<_$signUpAgreeWithStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SignUpButtonLoadingDataImplCopyWith<$Res> {
+  factory _$$SignUpButtonLoadingDataImplCopyWith(
+          _$SignUpButtonLoadingDataImpl value,
+          $Res Function(_$SignUpButtonLoadingDataImpl) then) =
+      __$$SignUpButtonLoadingDataImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SignUpButtonLoadingDataImplCopyWithImpl<$Res>
+    extends _$SignUpStateCopyWithImpl<$Res, _$SignUpButtonLoadingDataImpl>
+    implements _$$SignUpButtonLoadingDataImplCopyWith<$Res> {
+  __$$SignUpButtonLoadingDataImplCopyWithImpl(
+      _$SignUpButtonLoadingDataImpl _value,
+      $Res Function(_$SignUpButtonLoadingDataImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SignUpButtonLoadingDataImpl implements SignUpButtonLoadingData {
+  const _$SignUpButtonLoadingDataImpl();
+
+  @override
+  String toString() {
+    return 'SignUpState.loading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SignUpButtonLoadingDataImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String value) userSignUpEmailAddress,
+    required TResult Function(String value) userSignUpPassword,
+    required TResult Function(String value) userSignUpFirstName,
+    required TResult Function(String value) userSignUpLastName,
+    required TResult Function(String value) userSignUpPhone,
+    required TResult Function(String value) userSignUpCuntryCode,
+    required TResult Function(bool value) showUserSignUpPassword,
+    required TResult Function(bool value) buttonSignUpVaildation,
+    required TResult Function(bool value) signUpAgreeWith,
+    required TResult Function() loading,
+    required TResult Function(int statesCode, String errorMessage) error,
+    required TResult Function(RegisterResponse data) suceess,
+  }) {
+    return loading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String value)? userSignUpEmailAddress,
+    TResult? Function(String value)? userSignUpPassword,
+    TResult? Function(String value)? userSignUpFirstName,
+    TResult? Function(String value)? userSignUpLastName,
+    TResult? Function(String value)? userSignUpPhone,
+    TResult? Function(String value)? userSignUpCuntryCode,
+    TResult? Function(bool value)? showUserSignUpPassword,
+    TResult? Function(bool value)? buttonSignUpVaildation,
+    TResult? Function(bool value)? signUpAgreeWith,
+    TResult? Function()? loading,
+    TResult? Function(int statesCode, String errorMessage)? error,
+    TResult? Function(RegisterResponse data)? suceess,
+  }) {
+    return loading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String value)? userSignUpEmailAddress,
+    TResult Function(String value)? userSignUpPassword,
+    TResult Function(String value)? userSignUpFirstName,
+    TResult Function(String value)? userSignUpLastName,
+    TResult Function(String value)? userSignUpPhone,
+    TResult Function(String value)? userSignUpCuntryCode,
+    TResult Function(bool value)? showUserSignUpPassword,
+    TResult Function(bool value)? buttonSignUpVaildation,
+    TResult Function(bool value)? signUpAgreeWith,
+    TResult Function()? loading,
+    TResult Function(int statesCode, String errorMessage)? error,
+    TResult Function(RegisterResponse data)? suceess,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(UserSignUpEmailAddressState value)
+        userSignUpEmailAddress,
+    required TResult Function(UserSignUpPasswordState value) userSignUpPassword,
+    required TResult Function(UserSignUpFirstNameState value)
+        userSignUpFirstName,
+    required TResult Function(UserSignUpLastNameState value) userSignUpLastName,
+    required TResult Function(UserSignUpPhoneState value) userSignUpPhone,
+    required TResult Function(UserSignUpCuntryCodeState value)
+        userSignUpCuntryCode,
+    required TResult Function(ShowUserSignUpPasswordState value)
+        showUserSignUpPassword,
+    required TResult Function(ButtonSignUpVaildationState value)
+        buttonSignUpVaildation,
+    required TResult Function(signUpAgreeWithState value) signUpAgreeWith,
+    required TResult Function(SignUpButtonLoadingData value) loading,
+    required TResult Function(SignUpButtonErrorData value) error,
+    required TResult Function(SignUpButtonSuccessData value) suceess,
+  }) {
+    return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(UserSignUpEmailAddressState value)?
+        userSignUpEmailAddress,
+    TResult? Function(UserSignUpPasswordState value)? userSignUpPassword,
+    TResult? Function(UserSignUpFirstNameState value)? userSignUpFirstName,
+    TResult? Function(UserSignUpLastNameState value)? userSignUpLastName,
+    TResult? Function(UserSignUpPhoneState value)? userSignUpPhone,
+    TResult? Function(UserSignUpCuntryCodeState value)? userSignUpCuntryCode,
+    TResult? Function(ShowUserSignUpPasswordState value)?
+        showUserSignUpPassword,
+    TResult? Function(ButtonSignUpVaildationState value)?
+        buttonSignUpVaildation,
+    TResult? Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult? Function(SignUpButtonLoadingData value)? loading,
+    TResult? Function(SignUpButtonErrorData value)? error,
+    TResult? Function(SignUpButtonSuccessData value)? suceess,
+  }) {
+    return loading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(UserSignUpEmailAddressState value)? userSignUpEmailAddress,
+    TResult Function(UserSignUpPasswordState value)? userSignUpPassword,
+    TResult Function(UserSignUpFirstNameState value)? userSignUpFirstName,
+    TResult Function(UserSignUpLastNameState value)? userSignUpLastName,
+    TResult Function(UserSignUpPhoneState value)? userSignUpPhone,
+    TResult Function(UserSignUpCuntryCodeState value)? userSignUpCuntryCode,
+    TResult Function(ShowUserSignUpPasswordState value)? showUserSignUpPassword,
+    TResult Function(ButtonSignUpVaildationState value)? buttonSignUpVaildation,
+    TResult Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult Function(SignUpButtonLoadingData value)? loading,
+    TResult Function(SignUpButtonErrorData value)? error,
+    TResult Function(SignUpButtonSuccessData value)? suceess,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignUpButtonLoadingData implements SignUpState {
+  const factory SignUpButtonLoadingData() = _$SignUpButtonLoadingDataImpl;
+}
+
+/// @nodoc
+abstract class _$$SignUpButtonErrorDataImplCopyWith<$Res> {
+  factory _$$SignUpButtonErrorDataImplCopyWith(
+          _$SignUpButtonErrorDataImpl value,
+          $Res Function(_$SignUpButtonErrorDataImpl) then) =
+      __$$SignUpButtonErrorDataImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int statesCode, String errorMessage});
+}
+
+/// @nodoc
+class __$$SignUpButtonErrorDataImplCopyWithImpl<$Res>
+    extends _$SignUpStateCopyWithImpl<$Res, _$SignUpButtonErrorDataImpl>
+    implements _$$SignUpButtonErrorDataImplCopyWith<$Res> {
+  __$$SignUpButtonErrorDataImplCopyWithImpl(_$SignUpButtonErrorDataImpl _value,
+      $Res Function(_$SignUpButtonErrorDataImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? statesCode = null,
+    Object? errorMessage = null,
+  }) {
+    return _then(_$SignUpButtonErrorDataImpl(
+      statesCode: null == statesCode
+          ? _value.statesCode
+          : statesCode // ignore: cast_nullable_to_non_nullable
+              as int,
+      errorMessage: null == errorMessage
+          ? _value.errorMessage
+          : errorMessage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SignUpButtonErrorDataImpl implements SignUpButtonErrorData {
+  const _$SignUpButtonErrorDataImpl(
+      {required this.statesCode, required this.errorMessage});
+
+  @override
+  final int statesCode;
+  @override
+  final String errorMessage;
+
+  @override
+  String toString() {
+    return 'SignUpState.error(statesCode: $statesCode, errorMessage: $errorMessage)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SignUpButtonErrorDataImpl &&
+            (identical(other.statesCode, statesCode) ||
+                other.statesCode == statesCode) &&
+            (identical(other.errorMessage, errorMessage) ||
+                other.errorMessage == errorMessage));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, statesCode, errorMessage);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SignUpButtonErrorDataImplCopyWith<_$SignUpButtonErrorDataImpl>
+      get copyWith => __$$SignUpButtonErrorDataImplCopyWithImpl<
+          _$SignUpButtonErrorDataImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String value) userSignUpEmailAddress,
+    required TResult Function(String value) userSignUpPassword,
+    required TResult Function(String value) userSignUpFirstName,
+    required TResult Function(String value) userSignUpLastName,
+    required TResult Function(String value) userSignUpPhone,
+    required TResult Function(String value) userSignUpCuntryCode,
+    required TResult Function(bool value) showUserSignUpPassword,
+    required TResult Function(bool value) buttonSignUpVaildation,
+    required TResult Function(bool value) signUpAgreeWith,
+    required TResult Function() loading,
+    required TResult Function(int statesCode, String errorMessage) error,
+    required TResult Function(RegisterResponse data) suceess,
+  }) {
+    return error(statesCode, errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String value)? userSignUpEmailAddress,
+    TResult? Function(String value)? userSignUpPassword,
+    TResult? Function(String value)? userSignUpFirstName,
+    TResult? Function(String value)? userSignUpLastName,
+    TResult? Function(String value)? userSignUpPhone,
+    TResult? Function(String value)? userSignUpCuntryCode,
+    TResult? Function(bool value)? showUserSignUpPassword,
+    TResult? Function(bool value)? buttonSignUpVaildation,
+    TResult? Function(bool value)? signUpAgreeWith,
+    TResult? Function()? loading,
+    TResult? Function(int statesCode, String errorMessage)? error,
+    TResult? Function(RegisterResponse data)? suceess,
+  }) {
+    return error?.call(statesCode, errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String value)? userSignUpEmailAddress,
+    TResult Function(String value)? userSignUpPassword,
+    TResult Function(String value)? userSignUpFirstName,
+    TResult Function(String value)? userSignUpLastName,
+    TResult Function(String value)? userSignUpPhone,
+    TResult Function(String value)? userSignUpCuntryCode,
+    TResult Function(bool value)? showUserSignUpPassword,
+    TResult Function(bool value)? buttonSignUpVaildation,
+    TResult Function(bool value)? signUpAgreeWith,
+    TResult Function()? loading,
+    TResult Function(int statesCode, String errorMessage)? error,
+    TResult Function(RegisterResponse data)? suceess,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(statesCode, errorMessage);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(UserSignUpEmailAddressState value)
+        userSignUpEmailAddress,
+    required TResult Function(UserSignUpPasswordState value) userSignUpPassword,
+    required TResult Function(UserSignUpFirstNameState value)
+        userSignUpFirstName,
+    required TResult Function(UserSignUpLastNameState value) userSignUpLastName,
+    required TResult Function(UserSignUpPhoneState value) userSignUpPhone,
+    required TResult Function(UserSignUpCuntryCodeState value)
+        userSignUpCuntryCode,
+    required TResult Function(ShowUserSignUpPasswordState value)
+        showUserSignUpPassword,
+    required TResult Function(ButtonSignUpVaildationState value)
+        buttonSignUpVaildation,
+    required TResult Function(signUpAgreeWithState value) signUpAgreeWith,
+    required TResult Function(SignUpButtonLoadingData value) loading,
+    required TResult Function(SignUpButtonErrorData value) error,
+    required TResult Function(SignUpButtonSuccessData value) suceess,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(UserSignUpEmailAddressState value)?
+        userSignUpEmailAddress,
+    TResult? Function(UserSignUpPasswordState value)? userSignUpPassword,
+    TResult? Function(UserSignUpFirstNameState value)? userSignUpFirstName,
+    TResult? Function(UserSignUpLastNameState value)? userSignUpLastName,
+    TResult? Function(UserSignUpPhoneState value)? userSignUpPhone,
+    TResult? Function(UserSignUpCuntryCodeState value)? userSignUpCuntryCode,
+    TResult? Function(ShowUserSignUpPasswordState value)?
+        showUserSignUpPassword,
+    TResult? Function(ButtonSignUpVaildationState value)?
+        buttonSignUpVaildation,
+    TResult? Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult? Function(SignUpButtonLoadingData value)? loading,
+    TResult? Function(SignUpButtonErrorData value)? error,
+    TResult? Function(SignUpButtonSuccessData value)? suceess,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(UserSignUpEmailAddressState value)? userSignUpEmailAddress,
+    TResult Function(UserSignUpPasswordState value)? userSignUpPassword,
+    TResult Function(UserSignUpFirstNameState value)? userSignUpFirstName,
+    TResult Function(UserSignUpLastNameState value)? userSignUpLastName,
+    TResult Function(UserSignUpPhoneState value)? userSignUpPhone,
+    TResult Function(UserSignUpCuntryCodeState value)? userSignUpCuntryCode,
+    TResult Function(ShowUserSignUpPasswordState value)? showUserSignUpPassword,
+    TResult Function(ButtonSignUpVaildationState value)? buttonSignUpVaildation,
+    TResult Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult Function(SignUpButtonLoadingData value)? loading,
+    TResult Function(SignUpButtonErrorData value)? error,
+    TResult Function(SignUpButtonSuccessData value)? suceess,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignUpButtonErrorData implements SignUpState {
+  const factory SignUpButtonErrorData(
+      {required final int statesCode,
+      required final String errorMessage}) = _$SignUpButtonErrorDataImpl;
+
+  int get statesCode;
+  String get errorMessage;
+  @JsonKey(ignore: true)
+  _$$SignUpButtonErrorDataImplCopyWith<_$SignUpButtonErrorDataImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SignUpButtonSuccessDataImplCopyWith<$Res> {
+  factory _$$SignUpButtonSuccessDataImplCopyWith(
+          _$SignUpButtonSuccessDataImpl value,
+          $Res Function(_$SignUpButtonSuccessDataImpl) then) =
+      __$$SignUpButtonSuccessDataImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({RegisterResponse data});
+}
+
+/// @nodoc
+class __$$SignUpButtonSuccessDataImplCopyWithImpl<$Res>
+    extends _$SignUpStateCopyWithImpl<$Res, _$SignUpButtonSuccessDataImpl>
+    implements _$$SignUpButtonSuccessDataImplCopyWith<$Res> {
+  __$$SignUpButtonSuccessDataImplCopyWithImpl(
+      _$SignUpButtonSuccessDataImpl _value,
+      $Res Function(_$SignUpButtonSuccessDataImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$SignUpButtonSuccessDataImpl(
+      null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as RegisterResponse,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SignUpButtonSuccessDataImpl implements SignUpButtonSuccessData {
+  const _$SignUpButtonSuccessDataImpl(this.data);
+
+  @override
+  final RegisterResponse data;
+
+  @override
+  String toString() {
+    return 'SignUpState.suceess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SignUpButtonSuccessDataImpl &&
+            (identical(other.data, data) || other.data == data));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, data);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SignUpButtonSuccessDataImplCopyWith<_$SignUpButtonSuccessDataImpl>
+      get copyWith => __$$SignUpButtonSuccessDataImplCopyWithImpl<
+          _$SignUpButtonSuccessDataImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String value) userSignUpEmailAddress,
+    required TResult Function(String value) userSignUpPassword,
+    required TResult Function(String value) userSignUpFirstName,
+    required TResult Function(String value) userSignUpLastName,
+    required TResult Function(String value) userSignUpPhone,
+    required TResult Function(String value) userSignUpCuntryCode,
+    required TResult Function(bool value) showUserSignUpPassword,
+    required TResult Function(bool value) buttonSignUpVaildation,
+    required TResult Function(bool value) signUpAgreeWith,
+    required TResult Function() loading,
+    required TResult Function(int statesCode, String errorMessage) error,
+    required TResult Function(RegisterResponse data) suceess,
+  }) {
+    return suceess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String value)? userSignUpEmailAddress,
+    TResult? Function(String value)? userSignUpPassword,
+    TResult? Function(String value)? userSignUpFirstName,
+    TResult? Function(String value)? userSignUpLastName,
+    TResult? Function(String value)? userSignUpPhone,
+    TResult? Function(String value)? userSignUpCuntryCode,
+    TResult? Function(bool value)? showUserSignUpPassword,
+    TResult? Function(bool value)? buttonSignUpVaildation,
+    TResult? Function(bool value)? signUpAgreeWith,
+    TResult? Function()? loading,
+    TResult? Function(int statesCode, String errorMessage)? error,
+    TResult? Function(RegisterResponse data)? suceess,
+  }) {
+    return suceess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String value)? userSignUpEmailAddress,
+    TResult Function(String value)? userSignUpPassword,
+    TResult Function(String value)? userSignUpFirstName,
+    TResult Function(String value)? userSignUpLastName,
+    TResult Function(String value)? userSignUpPhone,
+    TResult Function(String value)? userSignUpCuntryCode,
+    TResult Function(bool value)? showUserSignUpPassword,
+    TResult Function(bool value)? buttonSignUpVaildation,
+    TResult Function(bool value)? signUpAgreeWith,
+    TResult Function()? loading,
+    TResult Function(int statesCode, String errorMessage)? error,
+    TResult Function(RegisterResponse data)? suceess,
+    required TResult orElse(),
+  }) {
+    if (suceess != null) {
+      return suceess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(UserSignUpEmailAddressState value)
+        userSignUpEmailAddress,
+    required TResult Function(UserSignUpPasswordState value) userSignUpPassword,
+    required TResult Function(UserSignUpFirstNameState value)
+        userSignUpFirstName,
+    required TResult Function(UserSignUpLastNameState value) userSignUpLastName,
+    required TResult Function(UserSignUpPhoneState value) userSignUpPhone,
+    required TResult Function(UserSignUpCuntryCodeState value)
+        userSignUpCuntryCode,
+    required TResult Function(ShowUserSignUpPasswordState value)
+        showUserSignUpPassword,
+    required TResult Function(ButtonSignUpVaildationState value)
+        buttonSignUpVaildation,
+    required TResult Function(signUpAgreeWithState value) signUpAgreeWith,
+    required TResult Function(SignUpButtonLoadingData value) loading,
+    required TResult Function(SignUpButtonErrorData value) error,
+    required TResult Function(SignUpButtonSuccessData value) suceess,
+  }) {
+    return suceess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(UserSignUpEmailAddressState value)?
+        userSignUpEmailAddress,
+    TResult? Function(UserSignUpPasswordState value)? userSignUpPassword,
+    TResult? Function(UserSignUpFirstNameState value)? userSignUpFirstName,
+    TResult? Function(UserSignUpLastNameState value)? userSignUpLastName,
+    TResult? Function(UserSignUpPhoneState value)? userSignUpPhone,
+    TResult? Function(UserSignUpCuntryCodeState value)? userSignUpCuntryCode,
+    TResult? Function(ShowUserSignUpPasswordState value)?
+        showUserSignUpPassword,
+    TResult? Function(ButtonSignUpVaildationState value)?
+        buttonSignUpVaildation,
+    TResult? Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult? Function(SignUpButtonLoadingData value)? loading,
+    TResult? Function(SignUpButtonErrorData value)? error,
+    TResult? Function(SignUpButtonSuccessData value)? suceess,
+  }) {
+    return suceess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(UserSignUpEmailAddressState value)? userSignUpEmailAddress,
+    TResult Function(UserSignUpPasswordState value)? userSignUpPassword,
+    TResult Function(UserSignUpFirstNameState value)? userSignUpFirstName,
+    TResult Function(UserSignUpLastNameState value)? userSignUpLastName,
+    TResult Function(UserSignUpPhoneState value)? userSignUpPhone,
+    TResult Function(UserSignUpCuntryCodeState value)? userSignUpCuntryCode,
+    TResult Function(ShowUserSignUpPasswordState value)? showUserSignUpPassword,
+    TResult Function(ButtonSignUpVaildationState value)? buttonSignUpVaildation,
+    TResult Function(signUpAgreeWithState value)? signUpAgreeWith,
+    TResult Function(SignUpButtonLoadingData value)? loading,
+    TResult Function(SignUpButtonErrorData value)? error,
+    TResult Function(SignUpButtonSuccessData value)? suceess,
+    required TResult orElse(),
+  }) {
+    if (suceess != null) {
+      return suceess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignUpButtonSuccessData implements SignUpState {
+  const factory SignUpButtonSuccessData(final RegisterResponse data) =
+      _$SignUpButtonSuccessDataImpl;
+
+  RegisterResponse get data;
+  @JsonKey(ignore: true)
+  _$$SignUpButtonSuccessDataImplCopyWith<_$SignUpButtonSuccessDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

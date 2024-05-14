@@ -1,16 +1,13 @@
 import 'package:altayer/core/routing/routes.dart';
-import 'package:altayer/core/style/fonts/font_manger.dart';
 import 'package:altayer/core/style/fonts/strings_manger.dart';
-import 'package:altayer/core/style/sharedWidget/custom_button.dart';
 import 'package:altayer/core/utils/extensions.dart';
-import 'package:altayer/feature/login/bloc/login_bloc.dart';
 import 'package:altayer/feature/login/presentation/widget/email_login_text_form_field.dart';
 import 'package:altayer/feature/login/presentation/widget/or_sign_in_with_text.dart';
 import 'package:altayer/feature/login/presentation/widget/password_login_text_form_field.dart';
 import 'package:altayer/feature/login/presentation/widget/sign_in_with_apple_face_book_and_google_button.dart';
+import 'package:altayer/feature/login/presentation/widget/sign_in_button.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginViewBody extends StatelessWidget {
@@ -69,23 +66,7 @@ class LoginViewBody extends StatelessWidget {
               SizedBox(
                 height: 20.h,
               ),
-              BlocBuilder<LoginBloc, LoginState>(
-                builder: (context, state) {
-                  return CustomButton(
-                    onPressed: state.whenOrNull(
-                      buttonLoginVaildation: (value) {
-                        return value == false ? null : () {};
-                      },
-                    ),
-                    text: Text(
-                      AppStrings.signIn,
-                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                          fontSize: 14.sp,
-                          fontWeight: FontWeightManger.semiBold),
-                    ),
-                  );
-                },
-              ),
+              const SignInButton(),
               SizedBox(
                 height: 50.h,
               ),
@@ -129,3 +110,4 @@ class LoginViewBody extends StatelessWidget {
     );
   }
 }
+

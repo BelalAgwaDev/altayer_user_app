@@ -9,6 +9,8 @@ class SignUpEvent with _$SignUpEvent {
   const factory SignUpEvent.userSignUpLastName(String value) = UserSignUpLastNameEvent;
   const factory SignUpEvent.userSignUpPhone(String value) = UserSignUpPhoneEvent;
   const factory SignUpEvent.userSignUpCountryCode(String value) = UserSignUpCountryCodeEvent;
-  const factory SignUpEvent.userSignUpAgreeWith() = UserSignUpAgreeWithEvent;
+  const factory SignUpEvent.userSignUpAgreeWith(bool? value) = UserSignUpAgreeWithEvent;
   const factory SignUpEvent.userShowSignUpPassword() = UserShowSignUpPasswordEvent;
+  const factory SignUpEvent.userRegisterButton() = UserRegisterButtonEvent;
+
 }

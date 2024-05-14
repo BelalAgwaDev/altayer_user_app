@@ -1,6 +1,6 @@
 
 import 'package:altayer/core/style/images/asset_manger.dart';
-import 'package:altayer/core/style/sharedWidget/circle_avatar_icon_button.dart';
+import 'package:altayer/core/common/sharedWidget/circle_avatar_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

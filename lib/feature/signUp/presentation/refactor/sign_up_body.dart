@@ -1,6 +1,4 @@
-import 'package:altayer/core/style/fonts/font_manger.dart';
 import 'package:altayer/core/style/fonts/strings_manger.dart';
-import 'package:altayer/core/style/sharedWidget/custom_button.dart';
 import 'package:altayer/feature/signUp/bloc/sign_up_bloc.dart';
 import 'package:altayer/feature/signUp/presentation/widget/agree_with_terms_condition.dart';
 import 'package:altayer/feature/signUp/presentation/widget/already_have_an_account_text.dart';
@@ -9,6 +7,7 @@ import 'package:altayer/feature/signUp/presentation/widget/name_text_form_field.
 import 'package:altayer/feature/signUp/presentation/widget/or_sign_up_with.dart';
 import 'package:altayer/feature/signUp/presentation/widget/password_sign_up_text_form_field.dart';
 import 'package:altayer/feature/signUp/presentation/widget/phone_text_form_field.dart';
+import 'package:altayer/feature/signUp/presentation/widget/sign_up_button.dart';
 import 'package:altayer/feature/signUp/presentation/widget/sign_up_using_google_apple_face_book.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -69,15 +68,7 @@ class SignUpViewBody extends StatelessWidget {
                   SizedBox(
                     height: 15.h,
                   ),
-                  CustomButton(
-                    onPressed: () {},
-                    text: Text(
-                      AppStrings.signUp,
-                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                          fontSize: 14.sp,
-                          fontWeight: FontWeightManger.semiBold),
-                    ),
-                  ),
+                  const SignUpButton(),
                   SizedBox(
                     height: 30.h,
                   ),

@@ -5,13 +5,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final Color color;
-  final Text text;
+  final Widget? widget;
 
   CustomButton({
     super.key,
     color,
     required this.onPressed,
-    required this.text,
+    required this.widget,
   }) : color = onPressed == null ? ColorManger.black54 : ColorManger.primary;
 
   @override
@@ -21,7 +21,7 @@ class CustomButton extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12.r), color: color),
-      child: TextButton(onPressed: onPressed, child: text),
+      child: TextButton(onPressed: onPressed, child: widget!),
     );
   }
 }

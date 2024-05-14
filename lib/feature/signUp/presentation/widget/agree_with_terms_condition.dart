@@ -21,7 +21,7 @@ class AgreeWithTermsCondition extends StatelessWidget {
               onChanged: (bool? value) {
                 context
                     .read<SignUpBloc>()
-                    .add(const UserSignUpAgreeWithEvent());
+                    .add(UserSignUpAgreeWithEvent(value!));
               },
               activeColor: ColorManger.primary,
               side: MaterialStateBorderSide.resolveWith(

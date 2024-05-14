@@ -15,6 +15,7 @@ class AppStrings {
   static const String next = "Next";
   static const String getStarted = "Get Started";
   static const String signIn = "Sign In";
+  static const String loading = 'Loading ....';
   static const String verify = "Verify";
   static const String continueText = "Continue";
   static const String hiWelcomeBack = "Hi! Welcome back, you've been missed";
@@ -66,4 +67,7 @@ class AppStrings {
       "Please Enter Valid Phone Number";
   static const String pleaseEnterValidSignUpPhoneNumber =
       " 8 characters, at least one lowercase,uppercase \n letter,number and special character";
+
+  static const String confirmPasswordNotEqualNewPassword =
+      "Confirm Password not equal new Password";
 }

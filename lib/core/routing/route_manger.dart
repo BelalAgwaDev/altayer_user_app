@@ -1,7 +1,7 @@
 import 'package:altayer/core/application/di.dart';
 import 'package:altayer/core/routing/routes.dart';
-import 'package:altayer/feature/forgetPassword/cubit/forget_password_cubit.dart';
-import 'package:altayer/feature/forgetPassword/screen/forget_password_screen.dart';
+import 'package:altayer/feature/forgetPassword/bloc/forget_password_bloc.dart';
+import 'package:altayer/feature/forgetPassword/presntation/screen/forget_password_screen.dart';
 import 'package:altayer/feature/login/bloc/login_bloc.dart';
 import 'package:altayer/feature/newPassword/screen/new_password_view.dart';
 import 'package:altayer/feature/onBoarding/presentation/screen/on_boarding_view.dart';
@@ -44,24 +44,24 @@ class RouteGenerator {
 
       case Routes.forgetPasswordRoute:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => instance<ForgetPasswordCubit>(),
+          builder: (_) => BlocProvider.value(
+            value: instance<ForgetPasswordBloc>(),
             child: const ForgetPasswordScreen(),
           ),
         );
 
       case Routes.verificationCodeViewRoute:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => instance<ForgetPasswordCubit>(),
+          builder: (_) => BlocProvider.value(
+            value: instance<ForgetPasswordBloc>(),
             child: const VerificationCodeView(),
           ),
         );
 
       case Routes.newPassword:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => instance<ForgetPasswordCubit>(),
+          builder: (_) => BlocProvider.value(
+            value: instance<ForgetPasswordBloc>(),
             child: const NewPasswordView(),
           ),
         );

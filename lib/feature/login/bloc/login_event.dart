@@ -6,5 +6,6 @@ class LoginEvent with _$LoginEvent {
   const factory LoginEvent.userLoginEmailAddress(String value) = UserLoginEmailAddress;
   const factory LoginEvent.userLoginPassword(String value) = UserLoginPassword;
   const factory LoginEvent.userShowLoginPassword() = UserShowLoginPassword;
+  const factory LoginEvent.userLoginButton() = UserLoginButton;
 
 }
