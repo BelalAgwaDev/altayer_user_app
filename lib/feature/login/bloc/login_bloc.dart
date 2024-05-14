@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:altayer/core/services/app_storage.dart';
 import 'package:altayer/core/style/fonts/strings_manger.dart';
 import 'package:altayer/core/utils/app_regex.dart';
 import 'package:altayer/feature/login/data/model/bodyRequest/login_body_request.dart';
@@ -18,10 +19,12 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   final TextEditingController userLoginPassword = TextEditingController();
   final loginFormKey = GlobalKey<FormState>();
   final LoginRepository _loginRepository;
+  final AppPreferences _appPreferences;
   bool showPass = true;
   bool isButtonInVaildator = false;
 
-  LoginBloc(this._loginRepository) : super(const _Initial()) {
+  LoginBloc(this._loginRepository, this._appPreferences)
+      : super(const _Initial()) {
     on<UserLoginButton>(loginButton);
     on<LoginEvent>((event, emit) {
       if (event is UserLoginEmailAddress) {
@@ -81,6 +84,12 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
         response.when(
           success: (loginResponse) {
+            _appPreferences.setLoginScreenView();
+            _appPreferences.setLoginScreenData(
+                userEmail: loginResponse.data!.email!,
+                userToken: loginResponse.token!,
+                userName: loginResponse.data!.name!,
+                userPhone: loginResponse.data!.phone!);
             emit(LoginState.suceess(loginResponse));
           },
           failure: (error) {

@@ -1,7 +1,9 @@
 import 'package:altayer/core/common/toast/show_toast.dart';
+import 'package:altayer/core/routing/routes.dart';
 import 'package:altayer/core/style/fonts/font_manger.dart';
 import 'package:altayer/core/style/fonts/strings_manger.dart';
 import 'package:altayer/core/common/sharedWidget/custom_button.dart';
+import 'package:altayer/core/utils/extensions.dart';
 import 'package:altayer/feature/login/bloc/login_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -17,11 +19,13 @@ class SignInButton extends StatelessWidget {
     return BlocConsumer<LoginBloc, LoginState>(
       listener: (context, state) {
         state.whenOrNull(
-          error: (statesCode, errorMessage) => ShowToast.showToastErrorTop(
-              errorMessage: errorMessage, context: context),
-          suceess: (data) => ShowToast.showToastSuccessTop(
-              message: data.message!, context: context),
-        );
+            error: (statesCode, errorMessage) => ShowToast.showToastErrorTop(
+                errorMessage: errorMessage, context: context),
+            suceess: (data) {
+              ShowToast.showToastSuccessTop(
+                  message: data.message!, context: context);
+              context.pushReplacementNamed(Routes.home);
+            });
       },
       builder: (context, state) {
         return CustomButton(

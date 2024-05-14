@@ -38,17 +38,14 @@ class ShowToast {
         animationDuration: const Duration(milliseconds: 200),
 
         margin: EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),
+        showProgressBar: false,
         closeOnClick: true,
-        // applyBlurEffect: true,
+      
 
-        autoCloseDuration: const Duration(seconds: 3),
-        backgroundColor: Colors.green,
-        progressBarTheme: ProgressIndicatorThemeData(
-            color: Colors.white, linearMinHeight: 2.h),
-        primaryColor: Colors.white70,
-        foregroundColor: Colors.white70,
+        autoCloseDuration: const Duration(seconds: 2),
+   
 
-        style: ToastificationStyle.flatColored,
+        style: ToastificationStyle.fillColored,
 
         type: ToastificationType.success,
       );

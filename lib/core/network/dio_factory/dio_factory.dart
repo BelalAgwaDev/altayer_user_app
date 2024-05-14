@@ -1,6 +1,6 @@
 import 'package:altayer/core/network/api_constant/api_constant.dart';
+import 'package:altayer/core/services/app_storage.dart';
 import 'package:dio/dio.dart';
-
 
 import 'package:flutter/foundation.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
@@ -11,14 +11,15 @@ const String accept = 'Accept';
 const String authorization = 'Authorization';
 
 class DioFactory {
+  final AppPreferences _appPreferences;
+  DioFactory(this._appPreferences);
+
   Future<Dio> getDio() async {
     final dio = Dio();
-
     // one min time out
     final headers = <String, String>{
       contentType: applicationJson,
       accept: applicationJson,
-  
     };
 
     dio.options = BaseOptions(
@@ -31,29 +32,25 @@ class DioFactory {
       connectTimeout: const Duration(milliseconds: ApiConstants.apiTimeOut),
     );
 
-
     dio.interceptors.add(
       InterceptorsWrapper(
         onRequest: (options, handler) {
-          // options.headers['Authorization'] =
-          //     'Bearer ${SharedPref().getString(PrefKeys.userToken)}';
+          options.headers['Authorization'] =
+              'Bearer ${_appPreferences.isAccessToken()}';
 
           return handler.next(options);
         },
         onError: (error, handler) async {
-         if (error.response?.statusCode == 401) {
-       
+          if (error.response?.statusCode == 401) {
+            // Update the request header with the new access token
+            error.requestOptions.headers['Authorization'] =
+                'Bearer ${_appPreferences.isAccessToken()}';
 
-        // Update the request header with the new access token
-        // error.requestOptions.headers['Authorization'] = 'Bearer ${SharedPref().getString(PrefKeys.userToken)}';
-
-        // Repeat the request with the updated header
-        return handler.resolve(await dio.fetch(error.requestOptions));
-      }
-      return handler.next(error);
-    },
-  
-        
+            // Repeat the request with the updated header
+            return handler.resolve(await dio.fetch(error.requestOptions));
+          }
+          return handler.next(error);
+        },
       ),
     );
 

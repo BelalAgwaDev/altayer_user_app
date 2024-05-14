@@ -36,7 +36,8 @@ Future<void> initAppModule() async {
     )
 
     //dio factory
-    ..registerLazySingleton<DioFactory>(DioFactory.new);
+    // ..registerLazySingleton<DioFactory>(DioFactory.new,);
+    ..registerLazySingleton<DioFactory>(() => DioFactory(instance()));
 
   //app service client
   final dio = await instance<DioFactory>().getDio();
@@ -46,7 +47,7 @@ Future<void> initAppModule() async {
   instance
     ..registerLazySingleton<LoginRepository>(
         () => LoginRepository(instance(), instance()))
-    ..registerFactory<LoginBloc>(() => LoginBloc(instance()));
+    ..registerFactory<LoginBloc>(() => LoginBloc(instance(),instance()));
 
 //register
   instance

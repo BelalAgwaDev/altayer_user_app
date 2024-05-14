@@ -25,4 +25,23 @@ class AppPreferences {
   Future<bool> isUserLoggedIn() async {
     return _sharedPreferences.getBool(PrefKeys.prefsKeyIsUserLoggedIn) ?? false;
   }
+
+  //set login screen data
+  Future<void> setLoginScreenData({
+    required String userToken,
+    required String userName,
+    required String userPhone,
+    required String userEmail,
+  }) async {
+    await _sharedPreferences.setString(PrefKeys.userToken, userToken);
+    await _sharedPreferences.setString(PrefKeys.userName, userName);
+    await _sharedPreferences.setString(PrefKeys.userPhone, userPhone);
+    await _sharedPreferences.setString(PrefKeys.userEmail, userEmail);
+  }
+
+//user token
+ 
+  String isAccessToken() {
+    return  _sharedPreferences.getString(PrefKeys.userToken) ?? "";
+  }
 }

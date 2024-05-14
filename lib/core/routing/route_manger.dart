@@ -2,6 +2,7 @@ import 'package:altayer/core/application/di.dart';
 import 'package:altayer/core/routing/routes.dart';
 import 'package:altayer/feature/forgetPassword/bloc/forget_password_bloc.dart';
 import 'package:altayer/feature/forgetPassword/presntation/screen/forget_password_screen.dart';
+import 'package:altayer/feature/home/home_screen.dart';
 import 'package:altayer/feature/login/bloc/login_bloc.dart';
 import 'package:altayer/feature/newPassword/screen/new_password_view.dart';
 import 'package:altayer/feature/onBoarding/presentation/screen/on_boarding_view.dart';
@@ -64,6 +65,11 @@ class RouteGenerator {
             value: instance<ForgetPasswordBloc>(),
             child: const NewPasswordView(),
           ),
+        );
+
+      case Routes.home:
+        return MaterialPageRoute(
+          builder: (_) => const HomeScreen(),
         );
 
       default:
