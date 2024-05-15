@@ -1,4 +1,4 @@
-
+import 'package:altayer/core/services/app_storage.dart';
 import 'package:altayer/core/style/fonts/strings_manger.dart';
 import 'package:altayer/core/utils/app_regex.dart';
 import 'package:altayer/feature/forgetPassword/data/model/bodyRequest/forget_password_body_request.dart';
@@ -23,6 +23,7 @@ class ForgetPasswordBloc
   final ForgetPasswordRepository _forgetPasswordRepository;
   final VerifyCodeRepository _verifyCodeRepository;
   final NewPasswordRepository _newPasswordRepository;
+  final AppPreferences _appPreferences;
   String? code;
   bool showNewPassword = true;
   bool showConfirmNewPassword = true;
@@ -34,7 +35,7 @@ class ForgetPasswordBloc
       TextEditingController();
   final TextEditingController userNewPassword = TextEditingController();
   final TextEditingController userConfirmNewPassword = TextEditingController();
-  ForgetPasswordBloc(this._forgetPasswordRepository,
+  ForgetPasswordBloc(this._forgetPasswordRepository, this._appPreferences,
       this._newPasswordRepository, this._verifyCodeRepository)
       : super(const _Initial()) {
     on<UserForgetNewPasswordButtonEvent>(createNewPasswordButton);
@@ -100,7 +101,6 @@ class ForgetPasswordBloc
       emit(ForgetPasswordState.userForgetButtonValidator(
           isContinueForgetPasswordButtonVaildatorInVaildator));
     } else {
-
       isContinueForgetPasswordButtonVaildatorInVaildator = true;
       emit(ForgetPasswordState.userForgetButtonValidator(
           isContinueForgetPasswordButtonVaildatorInVaildator));
@@ -215,6 +215,12 @@ class ForgetPasswordBloc
 
         response.when(
           success: (newPasswordResponse) {
+            _appPreferences.setLoginScreenView();
+            _appPreferences.setLoginScreenData(
+                userEmail: newPasswordResponse.data!.email!,
+                userToken: newPasswordResponse.token!,
+                userName: newPasswordResponse.data!.name!,
+                userPhone: newPasswordResponse.data!.phone!);
             emit(ForgetPasswordState.newPasswordSuceess(newPasswordResponse));
           },
           failure: (error) {

@@ -1,13 +1,10 @@
-import 'package:altayer/core/common/toast/show_toast.dart';
-import 'package:altayer/core/style/color/color_manger.dart';
-import 'package:altayer/core/style/fonts/font_manger.dart';
 import 'package:altayer/core/style/fonts/strings_manger.dart';
-import 'package:altayer/core/common/sharedWidget/custom_button.dart';
 import 'package:altayer/feature/forgetPassword/bloc/forget_password_bloc.dart';
+import 'package:altayer/feature/verifyCode/presentation/widget/verification_code_button.dart';
+import 'package:altayer/feature/verifyCode/presentation/widget/verify_code_text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_verification_code/flutter_verification_code.dart';
 
 class VerificationCodeBody extends StatelessWidget {
   const VerificationCodeBody({
@@ -40,7 +37,10 @@ class VerificationCodeBody extends StatelessWidget {
               height: 5.h,
             ),
             Text(
-              "example@gmail.com",
+              context
+                  .read<ForgetPasswordBloc>()
+                  .userForgetPasswordEmailAddress
+                  .text,
               style: Theme.of(context)
                   .textTheme
                   .titleMedium!
@@ -67,7 +67,11 @@ class VerificationCodeBody extends StatelessWidget {
             Align(
               alignment: Alignment.center,
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                       context
+                      .read<ForgetPasswordBloc>()
+                      .add(const UserForgetPasswordButtonEvent());
+                },
                 child: Text(
                   AppStrings.resendCode,
                   style: Theme.of(context).textTheme.titleMedium!.copyWith(
@@ -80,67 +84,7 @@ class VerificationCodeBody extends StatelessWidget {
             SizedBox(
               height: 30.h,
             ),
-            BlocConsumer<ForgetPasswordBloc, ForgetPasswordState>(
-              listener: (context, state) {
-                state.whenOrNull(
-                  verifyCodeError: (statesCode, errorMessage) =>
-                      ShowToast.showToastErrorTop(
-                          errorMessage: errorMessage, context: context),
-                  verifyCodeSuceess: (data) => ShowToast.showToastSuccessTop(
-                      message: data.message!, context: context),
-                );
-              },
-              builder: (context, state) {
-                return CustomButton(
-                  onPressed: context
-                          .read<ForgetPasswordBloc>()
-                          .isVerifyCodeButtonVaildatorInVaildator
-                      ? () {
-                          context
-                              .read<ForgetPasswordBloc>()
-                              .add(const UserForgetPasswordVerifyButtonEvent());
-
-                          // context.pushReplacementNamed(Routes.newPassword);
-                        }
-                      : null,
-                  widget: state.maybeWhen(
-                    verifyCodeLoading: () => Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          height: 20.h,
-                          width: 20.w,
-                          child: const CircularProgressIndicator(
-                            color: Colors.white,
-                            strokeWidth: 2.0,
-                            strokeAlign: 0.01,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 15.w,
-                        ),
-                        Text(
-                          AppStrings.loading,
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleLarge
-                              ?.copyWith(
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeightManger.semiBold),
-                        ),
-                      ],
-                    ),
-                    orElse: () => Text(
-                      AppStrings.verify,
-                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                          fontSize: 14.sp,
-                          fontWeight: FontWeightManger.semiBold),
-                    ),
-                  ),
-                );
-              },
-            ),
+            const VerificationCodeButton(),
           ],
         ),
       ),
@@ -148,29 +92,5 @@ class VerificationCodeBody extends StatelessWidget {
   }
 }
 
-class VerifyCodeTextFormField extends StatelessWidget {
-  const VerifyCodeTextFormField({
-    super.key,
-  });
 
-  @override
-  Widget build(BuildContext context) {
-    return VerificationCode(
-      textStyle:
-          Theme.of(context).textTheme.titleMedium!.copyWith(fontSize: 18.sp),
-      keyboardType: TextInputType.number,
-      underlineColor: ColorManger.primary,
-      fullBorder: true,
-      margin: const EdgeInsets.all(2),
-      length: 6,
-      itemSize: 40.spMax,
-      cursorColor: ColorManger.primary,
-      onCompleted: (String value) {
-        context
-            .read<ForgetPasswordBloc>()
-            .add(UserForgetPasswordOTPButtonEvent(value));
-      },
-      onEditing: (bool value) {},
-    );
-  }
-}
+

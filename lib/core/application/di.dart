@@ -47,13 +47,13 @@ Future<void> initAppModule() async {
   instance
     ..registerLazySingleton<LoginRepository>(
         () => LoginRepository(instance(), instance()))
-    ..registerFactory<LoginBloc>(() => LoginBloc(instance(),instance()));
+    ..registerFactory<LoginBloc>(() => LoginBloc(instance(), instance()));
 
 //register
   instance
     ..registerLazySingleton<RegisterRepository>(
         () => RegisterRepository(instance(), instance()))
-    ..registerFactory<SignUpBloc>(() => SignUpBloc(instance(),instance()));
+    ..registerFactory<SignUpBloc>(() => SignUpBloc(instance(), instance()));
 
   // forget password
   // verify code repositry
@@ -65,9 +65,8 @@ Future<void> initAppModule() async {
         () => VerifyCodeRepository(instance(), instance()))
     ..registerLazySingleton<NewPasswordRepository>(
         () => NewPasswordRepository(instance(), instance()))
-    ..registerFactory<ForgetPasswordBloc>(
-        () => ForgetPasswordBloc(instance(), instance(), instance()));
+    ..registerLazySingleton<ForgetPasswordBloc>(() =>
+        ForgetPasswordBloc(instance(), instance(), instance(), instance()));
 
-
+  
 }
-

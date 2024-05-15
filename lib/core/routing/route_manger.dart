@@ -4,7 +4,7 @@ import 'package:altayer/feature/forgetPassword/bloc/forget_password_bloc.dart';
 import 'package:altayer/feature/forgetPassword/presntation/screen/forget_password_screen.dart';
 import 'package:altayer/feature/home/home_screen.dart';
 import 'package:altayer/feature/login/bloc/login_bloc.dart';
-import 'package:altayer/feature/newPassword/screen/new_password_view.dart';
+import 'package:altayer/feature/newPassword/presentation/screen/new_password_view.dart';
 import 'package:altayer/feature/onBoarding/presentation/screen/on_boarding_view.dart';
 import 'package:altayer/feature/signUp/bloc/sign_up_bloc.dart';
 import 'package:altayer/feature/signUp/presentation/screen/sign_up_view.dart';
@@ -43,6 +43,8 @@ class RouteGenerator {
           ),
         );
 
+     
+
       case Routes.forgetPasswordRoute:
         return MaterialPageRoute(
           builder: (_) => BlocProvider.value(
@@ -51,7 +53,7 @@ class RouteGenerator {
           ),
         );
 
-      case Routes.verificationCodeViewRoute:
+          case Routes.verificationCodeViewRoute:
         return MaterialPageRoute(
           builder: (_) => BlocProvider.value(
             value: instance<ForgetPasswordBloc>(),

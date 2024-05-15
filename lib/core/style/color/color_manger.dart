@@ -4,7 +4,7 @@ class ColorManger {
 
   static Color primary =  const Color(0xff1e3a52).withAlpha(220);
 
-  //static Color offWhite =  const Color(0xffFFE7C1);
+  static Color darkBlue =  const Color(0xFF1A2F4B);
   static Color offWhite =  const Color(0xfffff6e9);
   static Color white =   Colors.white;
   static Color black =   Colors.black;

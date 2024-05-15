@@ -53,8 +53,8 @@ class SplashController extends GetxController
           if (isUserLoggedIn)
             {
               //navigate to main screen
-              // Navigator.pushReplacementNamed(context, Routes.bottomNavBarRoute),
-              Get.offAllNamed(Routes.loginRoute)
+
+              Get.offAllNamed(Routes.home)
             }
           else
             {
